@@ -1,0 +1,44 @@
+// Color palet
+$a: #889f43;
+$b: #bbb148;
+$c: #949255;
+$d: #b18834;
+$e: #6c5f3d;
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your color
+$primary: $a;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+
+$footer-background-color: $a;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert),
+    "second": ($b, findColorInvert($b)),
+    "third": ($c, findColorInvert($c)),
+    "fourth": ($d, findColorInvert($d)),
+    "fifth": ($e, findColorInvert($e)),
+);
+
+// Links
+$link: $e;
+$link-invert: findColorInvert($link);
+$link-focus-border: $e;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";

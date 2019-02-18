@@ -1,0 +1,248 @@
+<template>
+  <div id="app">
+    <nav
+      class="navbar is-primary nav-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="@/assets/LogoNoText.png" />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          data-target="navMenu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end  is-hidden-desktop">
+          <a class="navbar-item">
+            <span>Home</span>
+          </a>
+
+          <a class="navbar-item">
+            <span>Products</span>
+          </a>
+
+          <a class="navbar-item">
+            <span>About</span>
+          </a>
+
+          <a class="navbar-item">
+            <span>About</span>
+          </a>
+
+          <div class="navbar-divider" />
+
+          <a class="navbar-item">
+            <span>Sign up</span>
+          </a>
+
+          <a class="navbar-item">
+            <span>Log in</span>
+          </a>
+        </div>
+
+        <div class="navbar-end  is-hidden-touch">
+          <a class="navbar-item alternate hvr-shadow">
+            <span>Home</span>
+          </a>
+
+          <a class="navbar-item alternate hvr-shadow">
+            <span>Products</span>
+          </a>
+
+          <a class="navbar-item alternate hvr-shadow">
+            <span>About</span>
+          </a>
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-dark is-outlined is-rounded hvr-grow">
+                <strong>Sign up</strong>
+              </a>
+
+              <a
+                class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow"
+              >
+                <span class="icon hvr-icon">
+                  <font-awesome-icon icon="sign-in-alt" />
+                </span>
+                <span>Log in</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <router-view />
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p><strong>BoxSprout</strong></p>
+        <p>
+          Created by
+          <a
+            href="https://www.linkedin.com/in/eduard-monstrey-16904663/"
+            target="_blank"
+            ><strong>Eduard Monstrey</strong></a
+          >,
+          <a
+            href="https://www.linkedin.com/in/philippe-gilops-3971346b/"
+            target="_blank"
+          >
+            <strong>Philippe Gilops</strong></a
+          >,
+          <a
+            href="https://www.linkedin.com/in/martijn-gilis-3a255617b/"
+            target="_blank"
+          >
+            <strong>Martijn Gilis</strong></a
+          >, and
+          <a href="https://www.linkedin.com/in/anis-sakkaf/" target="_blank">
+            <strong>Anis Sakkaf</strong></a
+          >.
+        </p>
+      </div>
+    </footer>
+  </div>
+</template>
+
+<script lang="ts" scoped>
+import Vue from "vue";
+export default Vue.extend({});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbarBurgers: any[] = Array.prototype.slice.call(
+    document.querySelectorAll<HTMLInputElement>(".navbar-burger"),
+    0
+  );
+
+  if (navbarBurgers.length > 0) {
+    for (let elementName in navbarBurgers) {
+      if (!navbarBurgers.hasOwnProperty(elementName)) {
+        continue;
+      }
+
+      let el: HTMLInputElement = navbarBurgers[elementName];
+
+      el.addEventListener("click", () => {
+        const temp: string = el.dataset.target as string;
+        const target: HTMLElement = document.getElementById(
+          temp
+        ) as HTMLElement;
+
+        el.classList.toggle("is-active");
+        target.classList.toggle("is-active");
+      });
+    }
+  }
+});
+</script>
+
+<style lang="scss">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300|Fredoka+One:400);
+
+#app {
+  font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+
+  nav {
+    &.navbar {
+      img {
+        max-height: 2.73rem;
+      }
+
+      .navbar-divider {
+        display: block;
+        margin: 15px 40px;
+      }
+
+      .alternate {
+        $btn-width: 200px !default;
+        $btn-height: 45px !default;
+        $btn-color: $e;
+        $btn-color-dark: shade($btn-color, 40%);
+        margin-top: 3px;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        @include size(100%, $btn-height);
+        max-width: $btn-width;
+        text-transform: uppercase;
+        padding: 0.4rem 2rem;
+        color: darken($btn-color, 25);
+
+        &:before,
+        &:after {
+          z-index: -1;
+          box-sizing: border-box;
+          transition: 0.5s ease-in-out;
+          content: "";
+          @include absolute(0);
+          @include size(25.25%, 0);
+          background-color: $btn-color-dark;
+        }
+        &:before {
+          left: 0;
+        }
+        &:after {
+          left: 50%;
+        }
+
+        span {
+          padding-top: 5px;
+          transition: none;
+
+          &:before,
+          &:after {
+            z-index: -1;
+            box-sizing: border-box;
+            transition: 0.5s ease-in-out;
+            content: "";
+            @include absolute(0);
+            @include size(25.25%, 0);
+            background-color: $btn-color-dark;
+            top: auto;
+            bottom: 0;
+          }
+          &:before {
+            left: 25%;
+          }
+          &:after {
+            left: 75%;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          line-height: $btn-height;
+          color: black;
+        }
+
+        &:hover {
+          color: tint($btn-color, 75%);
+          background: transparent !important;
+
+          &:before,
+          &:after,
+          span:before,
+          span:after {
+            height: $btn-height;
+          }
+        }
+      }
+    }
+  }
+}
+</style>
