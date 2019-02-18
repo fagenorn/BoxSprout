@@ -18,7 +18,7 @@
               >
                 Kweken van plantjes en kruiden in een kleine doos. Bestellen van
                 zaadjes en informatie over het grootbrengen van plantjes en
-                mogelijke recepten.
+                mogelijke recepten!
               </h2>
               <div class="links">
                 <a
