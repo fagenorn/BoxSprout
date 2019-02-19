@@ -16,13 +16,13 @@
               <h2
                 class="is-size-4 is-size-6-mobile has-text-light has-font-weight-bold"
               >
-                Kweken van plantjes en kruiden in een kleine doos. Bestellen van
-                zaadjes en informatie over het grootbrengen van plantjes en
-                mogelijke recepten!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Facilis laborum provident debitis eum consequatur at
+                voluptatibus aliquid, ut libero. Aut.
               </h2>
               <div class="links">
                 <a
-                  class="is-size-4 is-size-6-mobile button is-fifth is-outlined is-large hvr-box-shadow-outset"
+                  class="is-size-4 is-size-6-mobile button is-fifth is-large hvr-grow"
                 >
                   Find out more
                 </a>
