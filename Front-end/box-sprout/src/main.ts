@@ -6,10 +6,13 @@ import "./registerServiceWorker";
 import Buefy from "buefy";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt, faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faSignInAlt);
+library.add(faEnvelope);
+library.add(faLock);
+library.add(faUser);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
