@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="is-clearfix">
     <nav
       class="navbar is-primary nav-top"
       role="navigation"
@@ -25,66 +25,68 @@
 
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-end  is-hidden-desktop">
-          <a class="navbar-item">
+          <router-link to="/" class="navbar-item">
             <span>Home</span>
-          </a>
+          </router-link>
 
-          <a class="navbar-item">
+          <router-link to="/products" class="navbar-item">
             <span>Products</span>
-          </a>
+          </router-link>
 
-          <a class="navbar-item">
+          <router-link to="/about" class="navbar-item">
             <span>About</span>
-          </a>
-
-          <a class="navbar-item">
-            <span>About</span>
-          </a>
+          </router-link>
 
           <div class="navbar-divider" />
 
-          <a class="navbar-item">
+          <router-link to="/sign-up" class="navbar-item">
             <span>Sign up</span>
-          </a>
+          </router-link>
 
-          <a class="navbar-item">
+          <router-link to="/log-in" class="navbar-item">
             <span>Log in</span>
-          </a>
+          </router-link>
         </div>
 
         <div class="navbar-end  is-hidden-touch">
-          <a class="navbar-item alternate hvr-shadow">
+          <router-link to="/" class="navbar-item alternate hvr-shadow">
             <span>Home</span>
-          </a>
+          </router-link>
 
-          <a class="navbar-item alternate hvr-shadow">
+          <router-link to="/products" class="navbar-item alternate hvr-shadow">
             <span>Products</span>
-          </a>
+          </router-link>
 
-          <a class="navbar-item alternate hvr-shadow">
+          <router-link to="/about" class="navbar-item alternate hvr-shadow">
             <span>About</span>
-          </a>
+          </router-link>
 
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-dark is-outlined is-rounded hvr-grow">
-                <strong>Sign up</strong>
-              </a>
+              <router-link
+                to="/sign-up"
+                class="button is-dark is-outlined is-rounded hvr-grow"
+              >
+                <span>Sign up</span>
+              </router-link>
 
-              <a
+              <router-link
+                to="/log-in"
                 class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow"
               >
                 <span class="icon hvr-icon">
                   <font-awesome-icon icon="sign-in-alt" />
                 </span>
                 <span>Log in</span>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
       </div>
     </nav>
-    <router-view />
+    <div class="root">
+      <router-view />
+    </div>
     <footer class="footer">
       <div class="content has-text-centered">
         <p><strong>BoxSprout</strong></p>
@@ -173,7 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
         $btn-height: 45px !default;
         $btn-color: $e;
         $btn-color-dark: shade($btn-color, 40%);
-        margin-top: 3px;
         position: relative;
         display: block;
         overflow: hidden;
@@ -181,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         max-width: $btn-width;
         text-transform: uppercase;
         padding: 0.4rem 2rem;
+        margin: 3px 2px;
         color: darken($btn-color, 25);
 
         &:before,
@@ -241,8 +243,18 @@ document.addEventListener("DOMContentLoaded", () => {
             height: $btn-height;
           }
         }
+
+        &:focus {
+          color: #dad7cf;
+
+          background-color: $btn-color-dark;
+        }
       }
     }
+  }
+
+  .root {
+    min-height: 100vh;
   }
 }
 </style>
