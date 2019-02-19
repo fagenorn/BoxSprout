@@ -7,11 +7,6 @@ const Login = () => import(/* webpackChunkName: "log in" */ './views/Login.vue')
 const SignUp = () => import(/* webpackChunkName: "sign up" */ './views/SignUp.vue')
 const NotFound = () => import(/* webpackChunkName: "not found" */ './views/NotFound.vue')
 
-const About = () => import(/* webpackChunkName: "about" */ './views/About.vue')
-const Login = () => import(/* webpackChunkName: "log in" */ './views/Login.vue')
-const SignUp = () => import(/* webpackChunkName: "sign up" */ './views/SignUp.vue')
-const NotFound = () => import(/* webpackChunkName: "not found" */ './views/NotFound.vue')
-
 Vue.use(Router);
 
 export default new Router({
