@@ -5,7 +5,7 @@
         <div class="columns is-vcentered">
           <div class="column is-hidden-mobile is-half">
             <img
-              src="@/assets/plant-1.png"
+              src="@/assets/plant-2.png"
               alt="A picture of a pretty plant."
             />
           </div>
@@ -14,30 +14,58 @@
             <h3
               class="has-text-light has-text-weight-bold is-size-1 is-size-3-mobile"
             >
-              Log in.
+              Sign up.
             </h3>
             <div class="field">
-              <label class="label is-size-3 is-size-5-mobile">Email</label>
+              <label class="label is-size-5 is-size-6-mobile">Email</label>
               <div class="control has-icons-left">
                 <input
                   type="email"
                   placeholder="e.g. bruce@batcave.io"
-                  class="input is-size-4 is-size-5-mobile"
+                  class="input is-size-6"
                 />
-                <span class="icon is-left is-size-4 is-size-5-mobile">
+                <span class="icon is-left is-size-6">
                   <font-awesome-icon icon="envelope" />
                 </span>
               </div>
             </div>
             <div class="field">
-              <label class="label is-size-3 is-size-5-mobile">Password</label>
+              <label class="label is-size-5 is-size-6-mobile">Username</label>
+              <div class="control has-icons-left">
+                <input
+                  type="text"
+                  placeholder="e.g. Brucy"
+                  class="input is-size-6"
+                />
+                <span class="icon is-left is-size-6">
+                  <font-awesome-icon icon="user" />
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label is-size-5 is-size-6-mobile">Password</label>
               <div class="control has-icons-left">
                 <input
                   type="password"
                   placeholder="e.g. ***********"
-                  class="input is-size-4 is-size-5-mobile"
+                  class="input is-size-6"
                 />
-                <span class="icon is-left is-size-4 is-size-5-mobile">
+                <span class="icon is-left is-size-6">
+                  <font-awesome-icon icon="lock" />
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label is-size-5 is-size-6-mobile"
+                >Confirm Password</label
+              >
+              <div class="control has-icons-left">
+                <input
+                  type="password"
+                  placeholder="e.g. ***********"
+                  class="input is-size-6"
+                />
+                <span class="icon is-left is-size-6">
                   <font-awesome-icon icon="lock" />
                 </span>
               </div>
@@ -47,7 +75,7 @@
                 <button
                   class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
                 >
-                  Submit
+                  Register
                 </button>
               </div>
             </div>
@@ -71,7 +99,7 @@ section {
     h3 {
       font-weight: 600;
       text-align: left;
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
     }
     .columns {
       display: flex;
