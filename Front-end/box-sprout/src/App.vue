@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="is-clearfix">
     <nav
       class="navbar is-primary nav-top"
       role="navigation"
