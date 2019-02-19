@@ -1,7 +1,11 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import NotFound from "./views/NotFound.vue";
+
+const About = () => import(/* webpackChunkName: "about" */ './views/About.vue')
+const Login = () => import(/* webpackChunkName: "log in" */ './views/Login.vue')
+const SignUp = () => import(/* webpackChunkName: "sign up" */ './views/SignUp.vue')
+const NotFound = () => import(/* webpackChunkName: "not found" */ './views/NotFound.vue')
 
 const About = () => import(/* webpackChunkName: "about" */ './views/About.vue')
 const Login = () => import(/* webpackChunkName: "log in" */ './views/Login.vue')
