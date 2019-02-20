@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 #app {
   font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
+  font-display: auto;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
