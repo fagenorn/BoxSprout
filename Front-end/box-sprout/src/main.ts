@@ -5,6 +5,8 @@ import "./registerServiceWorker";
 
 import Buefy from "buefy";
 
+import VueTinySlider from "vue-tiny-slider";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSignInAlt, faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -15,6 +17,7 @@ library.add(faLock);
 library.add(faUser);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
+Vue.component("tiny-slider", VueTinySlider);
 
 Vue.config.productionTip = false;
 
