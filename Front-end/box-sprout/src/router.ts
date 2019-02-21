@@ -2,10 +2,11 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 
-const About = () => import(/* webpackChunkName: "about" */ './views/About.vue')
+const About = () => import(/* webpackChunkName: "products" */ './views/About.vue')
+const Products = () => import(/* webpackChunkName: "products" */ './views/Products.vue')
 const Login = () => import(/* webpackChunkName: "log in" */ './views/Login.vue')
-const SignUp = () => import(/* webpackChunkName: "sign up" */ './views/SignUp.vue')
-const NotFound = () => import(/* webpackChunkName: "not found" */ './views/NotFound.vue')
+const SignUp = () => import(/* webpackChunkName: "log in" */ './views/SignUp.vue')
+const NotFound = () => import(/* webpackChunkName: "log in" */ './views/NotFound.vue')
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       component: About
     },
     {
+      path: "/products",
+      name: "products",
+      component: Products
+    },
+    {
       path: "/log-in",
       name: "login",
       component: Login
@@ -34,13 +40,13 @@ export default new Router({
       component: SignUp
     },
     {
-      path:"/404",
-      name:"not found",
+      path: "/404",
+      name: "not found",
       component: NotFound
     },
     {
-      path:"*",
-      redirect:"/404"
+      path: "*",
+      redirect: "/404"
     }
   ]
 });
