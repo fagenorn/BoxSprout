@@ -119,8 +119,13 @@
 </template>
 
 <script lang="ts" scoped>
-import Vue from "vue";
-export default Vue.extend({});
+import User from "@/models/user";
+import { Component, Vue } from "vue-property-decorator";
+
+@Component
+export default class App extends Vue {
+  user = User;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const navbarBurgers: any[] = Array.prototype.slice.call(

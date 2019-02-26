@@ -2,11 +2,16 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 
-const About = () => import(/* webpackChunkName: "products" */ './views/About.vue')
-const Products = () => import(/* webpackChunkName: "products" */ './views/Products.vue')
-const Login = () => import(/* webpackChunkName: "log in" */ './views/Login.vue')
-const SignUp = () => import(/* webpackChunkName: "log in" */ './views/SignUp.vue')
-const NotFound = () => import(/* webpackChunkName: "log in" */ './views/NotFound.vue')
+const About = () =>
+  import(/* webpackChunkName: "products" */ "./views/About.vue");
+const Products = () =>
+  import(/* webpackChunkName: "products" */ "./views/Products.vue");
+const Login = () =>
+  import(/* webpackChunkName: "log in" */ "./views/Login.vue");
+const SignUp = () =>
+  import(/* webpackChunkName: "log in" */ "./views/SignUp.vue");
+const NotFound = () =>
+  import(/* webpackChunkName: "log in" */ "./views/NotFound.vue");
 
 Vue.use(Router);
 
