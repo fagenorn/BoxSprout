@@ -5,10 +5,16 @@ import "./registerServiceWorker";
 
 import Buefy from "buefy";
 
-import VueTinySlider from "vue-tiny-slider";
+import axios from "./axios";
+import VueAxios from "vue-axios";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSignInAlt, faEnvelope, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSignInAlt,
+  faEnvelope,
+  faLock,
+  faUser
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faSignInAlt);
@@ -17,7 +23,6 @@ library.add(faLock);
 library.add(faUser);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-Vue.component("tiny-slider", VueTinySlider);
 
 Vue.config.productionTip = false;
 
@@ -26,4 +31,4 @@ new Vue({
   render: h => h(App)
 }).$mount("#app");
 
-Vue.use(Buefy);
+Vue.use(VueAxios, axios, Buefy);

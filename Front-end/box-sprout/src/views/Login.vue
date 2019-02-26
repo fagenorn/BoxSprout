@@ -16,47 +16,90 @@
             >
               Log in.
             </h3>
-            <div class="field">
-              <label class="label is-size-3 is-size-5-mobile">Email</label>
-              <div class="control has-icons-left">
-                <input
-                  type="email"
-                  placeholder="e.g. bruce@batcave.io"
-                  class="input is-size-4 is-size-5-mobile"
-                />
-                <span class="icon is-left is-size-4 is-size-5-mobile">
-                  <font-awesome-icon icon="envelope" />
-                </span>
+
+            <div class="notification is-second" v-if="login_response.failed">
+              <button
+                class="delete"
+                @click="login_response.failed = false"
+              ></button>
+              <div
+                v-for="(message, index) in login_response.messages"
+                :key="index"
+              >
+                <strong>{{ message }}</strong>
               </div>
             </div>
-            <div class="field">
-              <label class="label is-size-3 is-size-5-mobile">Password</label>
-              <div class="control has-icons-left">
-                <input
-                  type="password"
-                  placeholder="e.g. ***********"
-                  class="input is-size-4 is-size-5-mobile"
-                />
-                <span class="icon is-left is-size-4 is-size-5-mobile">
-                  <font-awesome-icon icon="lock" />
-                </span>
+
+            <form @submit.prevent="login">
+              <div class="field">
+                <label class="label is-size-3 is-size-5-mobile">Email</label>
+                <div class="control has-icons-left">
+                  <input
+                    v-model="details.email"
+                    type="email"
+                    placeholder="e.g. bruce@batcave.io"
+                    class="input is-size-4 is-size-5-mobile"
+                    required
+                  />
+                  <span class="icon is-left is-size-4 is-size-5-mobile">
+                    <font-awesome-icon icon="envelope" />
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <button
-                  class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
-                >
-                  Submit
-                </button>
+              <div class="field">
+                <label class="label is-size-3 is-size-5-mobile">Password</label>
+                <div class="control has-icons-left">
+                  <input
+                    v-model="details.password"
+                    type="password"
+                    placeholder="e.g. ***********"
+                    class="input is-size-4 is-size-5-mobile"
+                    required
+                  />
+                  <span class="icon is-left is-size-4 is-size-5-mobile">
+                    <font-awesome-icon icon="lock" />
+                  </span>
+                </div>
               </div>
-            </div>
+              <div class="field">
+                <div class="control">
+                  <button
+                    type="submit"
+                    class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script lang="ts" scoped>
+import User from "@/models/user";
+import { Component, Vue } from "vue-property-decorator";
+import { AxiosResponse } from "axios";
+import { LoginManager } from "@/models/login";
+
+@Component
+export default class Login extends Vue {
+  details = {} as LoginManager.LoginDetails;
+  login_response = {} as LoginManager.LoginResponse;
+
+  login() {
+    User.login(this.details).then(result => {
+      this.login_response = result;
+      if (!result.failed) {
+        alert(result.messages[0]);
+      }
+    });
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .label {

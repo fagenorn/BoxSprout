@@ -77,13 +77,15 @@
 </template>
 
 <script lang="ts">
-import Product from "../components/Product.vue";
-import Vue from "vue";
-export default Vue.extend({
+import Product from "@/components/Product.vue";
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
   components: {
     product: Product
   }
-});
+})
+export default class SignUp extends Vue {}
 </script>
 
 <style lang="scss" scoped>
