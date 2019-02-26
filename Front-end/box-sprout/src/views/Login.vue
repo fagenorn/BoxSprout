@@ -22,7 +22,12 @@
                 class="delete"
                 @click="login_response.failed = false"
               ></button>
-              <strong>{{ login_response.message }}</strong>
+              <div
+                v-for="(message, index) in login_response.messages"
+                :key="index"
+              >
+                <strong>{{ message }}</strong>
+              </div>
             </div>
 
             <form @submit.prevent="login">
@@ -85,11 +90,11 @@ export default class Login extends Vue {
   details = {} as LoginManager.LoginDetails;
   login_response = {} as LoginManager.LoginResponse;
 
-  register() {
+  login() {
     User.login(this.details).then(result => {
       this.login_response = result;
       if (!result.failed) {
-        alert(result.messages);
+        alert(result.messages[0]);
       }
     });
   }

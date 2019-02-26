@@ -122,7 +122,7 @@ export default class SignUp extends Vue {
     User.register(this.details).then(result => {
       this.login_response = result;
       if (!result.failed) {
-        alert(result.messages);
+        alert(result.messages[0]);
       }
     });
   }

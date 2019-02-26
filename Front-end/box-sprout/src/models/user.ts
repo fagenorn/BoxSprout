@@ -1,15 +1,17 @@
 import Vue from "vue";
-import { AxiosResponse } from "axios";
 import { LoginManager } from "./login";
 
+interface UserResponse {
+  email: string;
+  name: string;
+}
+
 class User {
-  private isLoggedIn_: boolean = false;
+  isLoggedIn: boolean = false;
+
+  userDetails = {} as UserResponse;
 
   constructor() {}
-
-  public isLoggedIn(): boolean {
-    return this.isLoggedIn_;
-  }
 
   public async login(
     details: LoginManager.LoginDetails
@@ -18,7 +20,7 @@ class User {
     if (result.failed) {
       this.loginFailed();
     } else {
-      this.loginSuccess(result);
+      await this.loginSuccess(result);
     }
 
     return result;
@@ -31,20 +33,29 @@ class User {
     if (result.failed) {
       this.loginFailed();
     } else {
-      this.loginSuccess(result);
+      await this.loginSuccess(result);
     }
 
     return result;
   }
 
-  private loginSuccess(result: LoginManager.LoginResponse) {
+  private async loginSuccess(result: LoginManager.LoginResponse) {
     localStorage.token = result.token;
-    this.isLoggedIn_ = true;
+    this.isLoggedIn = true;
+
+    try {
+      Vue.axios.defaults.headers["Authorization"] =
+        "Bearer " + localStorage.token;
+      let response = await Vue.axios.get("/user");
+      this.userDetails = response.data.data;
+    } catch (error) {
+      this.loginFailed();
+    }
   }
 
   private loginFailed() {
     delete localStorage.token;
-    this.isLoggedIn_ = false;
+    this.isLoggedIn = false;
   }
 }
 

@@ -8,6 +8,7 @@
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
           <img src="@/assets/LogoNoText.png" />
+          <h1 v-if="user.isLoggedIn">HI {{ user.userDetails.name }}</h1>
         </a>
 
         <a
@@ -125,6 +126,7 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class App extends Vue {
   user = User;
+  test = { best: "asdasd" };
 }
 
 document.addEventListener("DOMContentLoaded", () => {
