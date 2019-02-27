@@ -3,17 +3,17 @@ const glob = require("glob-all");
 const path = require("path");
 
 module.exports = {
-  css: {
-    loaderOptions: {
-      sass: {
-        data: `
-          @import "@/styles/_juice.scss";
-          @import "~hover.css/scss/hover.scss";
-          @import "@/styles/_bulma.scss";
-        `
-      }
-    }
-  },
+  // css: {
+  //   loaderOptions: {
+  //     sass: {
+  //       data: `
+  //         @import "@/styles/_juice.scss";
+  //         @import "~hover.css/scss/hover.scss";
+  //         @import "@/styles/_bulma.scss";
+  //       `
+  //     }
+  //   }
+  // },
   configureWebpack: {
     plugins: [
       new PurgecssPlugin({
