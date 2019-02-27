@@ -11,7 +11,21 @@ class User {
 
   userDetails = {} as UserResponse;
 
-  constructor() {}
+
+  public async initialize() {
+    const token = localStorage.getItem("token");
+
+    if (token) {
+      try {
+        let response = await Vue.axios.get("/user");
+        this.userDetails = response.data.data;
+        this.isLoggedIn = true;
+      } catch (error) {
+        this.loginFailed();
+      }
+    }
+  }
+
 
   public async login(
     details: LoginManager.LoginDetails
@@ -24,6 +38,16 @@ class User {
     }
 
     return result;
+  }
+
+
+  public async logout(details: LoginManager.LoginDetails) {
+    try {
+      await Vue.axios.get("/logout");
+      this.loginFailed();
+    } catch (error) {
+      // ignored
+    }
   }
 
   public async register(
@@ -44,8 +68,6 @@ class User {
     this.isLoggedIn = true;
 
     try {
-      Vue.axios.defaults.headers["Authorization"] =
-        "Bearer " + localStorage.token;
       let response = await Vue.axios.get("/user");
       this.userDetails = response.data.data;
     } catch (error) {

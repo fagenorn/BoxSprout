@@ -17,7 +17,7 @@
           <p class="description">
             {{ description }}
           </p>
-          <a class="button is-primary">Purchase</a>
+          <a class="button is-primary hvr-grow">Purchase</a>
         </div>
       </div>
     </div>

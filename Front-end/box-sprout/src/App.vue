@@ -6,10 +6,10 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <div class="navbar-item" href="#">
           <img src="@/assets/LogoNoText.png" />
-          <h1 v-if="user.isLoggedIn">HI {{ user.userDetails.name }}</h1>
-        </a>
+        </div>
+
 
         <a
           role="button"
@@ -39,14 +39,20 @@
           </router-link>
 
           <div class="navbar-divider" />
+          <div v-if="!user.isLoggedIn">
+            <router-link to="/sign-up" class="navbar-item">
+              <span>Sign up</span>
+            </router-link>
 
-          <router-link to="/sign-up" class="navbar-item">
-            <span>Sign up</span>
-          </router-link>
-
-          <router-link to="/log-in" class="navbar-item">
-            <span>Log in</span>
-          </router-link>
+            <router-link to="/log-in" class="navbar-item">
+              <span>Log in</span>
+            </router-link>
+          </div>
+          <div v-else>
+            <a @click="user.logout()" class="navbar-item">
+              <span>Log out</span>
+            </a>
+          </div>
         </div>
 
         <div class="navbar-end  is-hidden-touch">
@@ -62,7 +68,7 @@
             <span>About</span>
           </router-link>
 
-          <div class="navbar-item">
+          <div class="navbar-item" v-if="!user.isLoggedIn">
             <div class="buttons">
               <router-link
                 to="/sign-up"
@@ -80,6 +86,19 @@
                 </span>
                 <span>Log in</span>
               </router-link>
+            </div>
+          </div>
+          <div class="navbar-item" v-else>
+            <div class="buttons">
+              <a
+                @click="user.logout()"
+                class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow"
+              >
+                <span class="icon hvr-icon">
+                  <font-awesome-icon icon="sign-out-alt" />
+                </span>
+                <span>Log out</span>
+              </a>
             </div>
           </div>
         </div>
@@ -126,7 +145,6 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class App extends Vue {
   user = User;
-  test = { best: "asdasd" };
 }
 
 document.addEventListener("DOMContentLoaded", () => {
