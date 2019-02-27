@@ -38,7 +38,3 @@ $colors: (
 $link: $e;
 $link-invert: findColorInvert($link);
 $link-focus-border: $e;
-
-// Import Bulma and Buefy styles
-@import "~bulma";
-@import "~buefy/src/scss/buefy";

@@ -216,9 +216,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <style lang="scss">
-@import "@/styles/_juice.scss";
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
 @import "~hover.css/scss/hover.scss";
-@import "@/styles/_bulma.scss";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300,600|Fredoka+One:400");
 
 #app {
