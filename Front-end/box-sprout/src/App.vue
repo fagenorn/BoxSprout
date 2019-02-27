@@ -10,6 +10,7 @@
           <img src="@/assets/LogoNoText.png" />
         </div>
 
+
         <a
           role="button"
           class="navbar-burger burger"

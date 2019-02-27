@@ -11,6 +11,7 @@ class User {
 
   userDetails = {} as UserResponse;
 
+
   public async initialize() {
     const token = localStorage.getItem("token");
 
@@ -25,6 +26,7 @@ class User {
     }
   }
 
+
   public async login(
     details: LoginManager.LoginDetails
   ): Promise<LoginManager.LoginResponse> {
@@ -37,6 +39,7 @@ class User {
 
     return result;
   }
+
 
   public async logout(details: LoginManager.LoginDetails) {
     try {
