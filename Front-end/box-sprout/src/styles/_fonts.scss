@@ -3,7 +3,7 @@
   @font-face {
     font-family: "#{$family}";
     font-style: normal;
-    font-display: auto;
+    font-display: block;
     font-weight: $weight;
     src: local("#{$style-name}"), local("#{$file}"),
       url($filepath + ".ttf") format("truetype");
