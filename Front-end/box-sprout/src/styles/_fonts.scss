@@ -1,0 +1,15 @@
+@mixin font-face($style-name, $file, $family, $weight) {
+  $filepath: "~@/styles/fonts/" + $family + "/" + $file;
+  @font-face {
+    font-family: "#{$family}";
+    font-style: normal;
+    font-display: auto;
+    font-weight: $weight;
+    src: local("#{$style-name}"), local("#{$file}"),
+      url($filepath + ".ttf") format("truetype");
+  }
+}
+
+@include font-face("Fredoka One", "FredokaOne-Regular", "Fredoka One", 400);
+@include font-face("Raleway Light", "Raleway-Light", "Raleway", 300);
+@include font-face("Raleway SemiBold", "Raleway-SemiBold", "Raleway", 600);

@@ -191,11 +191,10 @@ document.addEventListener("DOMContentLoaded", () => {
 @import "~bulma/sass/grid/_all";
 @import "~bulma/sass/layout/_all";
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300,600|Fredoka+One:400");
+@import "@/styles/_fonts.scss";
 
 #app {
-  font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
-  font-display: auto;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
