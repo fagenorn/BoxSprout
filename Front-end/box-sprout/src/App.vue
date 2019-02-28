@@ -184,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
 @import "~bulma/sass/elements/icon";
 @import "~bulma/sass/elements/image";
 @import "~bulma/sass/elements/notification";
+@import "~bulma/sass/elements/other";
 @import "~bulma/sass/elements/title";
 @import "~bulma/sass/components/card";
 @import "~bulma/sass/components/media";
