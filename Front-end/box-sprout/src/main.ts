@@ -3,13 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import "./registerServiceWorker";
 
-import Buefy from "buefy";
-
 import axios from "@/models/axios";
 import VueAxios from "vue-axios";
 
 import User from "@/models/user";
-
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -36,6 +33,6 @@ new Vue({
   render: h => h(App)
 }).$mount("#app");
 
-Vue.use(VueAxios, axios, Buefy);
+Vue.use(VueAxios, axios);
 
 User.initialize();
