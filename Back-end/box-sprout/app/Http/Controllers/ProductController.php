@@ -56,6 +56,20 @@ class ProductController extends Controller
         return response()->json($product, 200);
     }
 
+    public function update_image(Request $request, Product $product)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName = time().'.'.$request->image->getClientOriginalExtension();
+
+        $request->image->move(public_path('images'), $imageName);
+
+        $product->update(['image' => $imageName]);
+        return response()->json($product, 200);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

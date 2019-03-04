@@ -1,22 +1,18 @@
 <template>
-  <div class="product">
+  <div class="product tile is-parent">
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img :src="image" :alt="title" />
+          <img :src="details.image" :alt="details.title" />
         </figure>
       </div>
       <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <p class="title is-4">{{ title }}</p>
-          </div>
+        <p class="title is-4">{{ details.title }}</p>
+        <hr />
+        <div class="content description">
+          <p>{{ details.description }}</p>
         </div>
-
-        <div class="content">
-          <p class="description">
-            {{ description }}
-          </p>
+        <div class="product-footer">
           <a class="button is-primary hvr-grow">Purchase</a>
         </div>
       </div>
@@ -26,24 +22,57 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { ProductResponse } from "@/models/product";
 
 @Component
 export default class Product extends Vue {
-  @Prop() private image!: string;
-  @Prop() private title!: string;
-  @Prop() private description!: string;
+  @Prop() details = {} as ProductResponse;
 }
 </script>
 
 <style scoped lang="scss">
-.description {
-  text-align: left;
-}
+.product {
+  .card {
+    border-radius: 9px 9px 0 0;
+  }
 
-a {
-  &.button {
-    margin-top: 1em;
+  img {
+    border-radius: 9px 9px 0 0;
+  }
+  .content {
+    margin-bottom: 2.5em;
     text-align: left;
   }
+  .product-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
 }
+
+// .my-footer {
+//   height: 50px; /* the footer's total height */
+// }
+
+// .my-footer-item {
+//   height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+//   padding: 8px;
+// }
+
+// // .tile {
+// //   img {
+// //     border-radius: 5px;
+// //   }
+// // }
+
+// .description {
+//   text-align: left;
+// }
+
+// a {
+//   &.button {
+//     margin: 10px 5px;
+//   }
+// }
 </style>

@@ -20,7 +20,9 @@ class ProductsTableSeeder extends Seeder
         // And now, let's create a few products in our database:
         for ($i = 0; $i < 8; $i++) {
             Product::create([
+                'price' => $faker->randomNumber(4),
                 'title' => $faker->sentence,
+                'image' => 'default.jpg',
                 'description' => $faker->paragraph,
             ]);
         }

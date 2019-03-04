@@ -17,6 +17,8 @@ class Product extends JsonResource
         return [
             'description' => $this->description,
             'title' => $this->title,
+            'price' => $this->price,
+            'image' => asset('images/products/'.$this->image)
         ];
     }
 }
