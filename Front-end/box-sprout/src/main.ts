@@ -6,6 +6,8 @@ import "./registerServiceWorker";
 import axios from "@/models/axios";
 import VueAxios from "vue-axios";
 
+import Loading from "vue-loading-overlay";
+
 import User from "@/models/user";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -25,6 +27,7 @@ library.add(faLock);
 library.add(faUser);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
+Vue.component("loading", Loading);
 
 Vue.config.productionTip = false;
 

@@ -1,1 +1,1 @@
-declare module "vue-tiny-slider";
+declare module "vue-loading-overlay";

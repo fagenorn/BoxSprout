@@ -10,7 +10,9 @@
       </div>
     </section>
 
-    <div class="container is-fluid" ref="container"></div>
+    <div class="container is-fluid" ref="container">
+      <loading :active.sync="isLoading" :is-full-page="false"></loading>
+    </div>
   </div>
 </template>
 
@@ -25,6 +27,8 @@ import ProductManager from "@/models/product";
   }
 })
 export default class Products extends Vue {
+  isLoading = true;
+
   $refs!: {
     container: HTMLFormElement;
   };
@@ -46,12 +50,18 @@ export default class Products extends Vue {
         // instance.$el.className += " tile";
         subContainer.appendChild(instance.$el);
       });
+
+      this.isLoading = false;
     });
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.vld-overlay {
+  min-height: 300px;
+}
+
 .products {
   margin-bottom: 2em;
 }

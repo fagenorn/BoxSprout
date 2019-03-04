@@ -192,6 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
 @import "~bulma/sass/grid/_all";
 @import "~bulma/sass/layout/_all";
 
+@import "~vue-loading-overlay/dist/vue-loading.css";
+
 @import "@/styles/_fonts.scss";
 
 #app {
