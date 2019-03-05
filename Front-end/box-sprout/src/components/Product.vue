@@ -13,7 +13,7 @@
           <p>{{ details.description }}</p>
         </div>
         <div class="product-footer">
-          <a class="button is-primary hvr-grow">Purchase</a>
+          <a class="button is-primary hvr-grow is-size-5-mobile">Purchase</a>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default class Product extends Vue {
     border-radius: 9px 9px 0 0;
   }
   .content {
-    margin-bottom: 2.5em;
+    margin-bottom: 3.5em;
     text-align: left;
   }
   .product-footer {
@@ -50,29 +50,4 @@ export default class Product extends Vue {
     right: 0;
   }
 }
-
-// .my-footer {
-//   height: 50px; /* the footer's total height */
-// }
-
-// .my-footer-item {
-//   height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
-//   padding: 8px;
-// }
-
-// // .tile {
-// //   img {
-// //     border-radius: 5px;
-// //   }
-// // }
-
-// .description {
-//   text-align: left;
-// }
-
-// a {
-//   &.button {
-//     margin: 10px 5px;
-//   }
-// }
 </style>

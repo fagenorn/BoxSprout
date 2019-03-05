@@ -7,7 +7,7 @@
     >
       <div class="navbar-brand">
         <div class="navbar-item" href="#">
-          <img src="@/assets/LogoNoText.png" />
+          <img src="@/assets/LogoNoText.svg" />
         </div>
 
         <a
