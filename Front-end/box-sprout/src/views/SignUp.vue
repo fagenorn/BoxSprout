@@ -112,8 +112,21 @@ import User from "@/models/user";
 import { Component, Vue } from "vue-property-decorator";
 import { AxiosResponse } from "axios";
 import { LoginManager } from "@/models/login";
+import { metaWrapper, titleTemplate } from "@/App.vue";
 
-@Component
+@Component({
+  metaInfo() {
+    const title = "Sign up";
+    const description = "Sign up to BoxSprout.";
+    const url = "sign-up";
+
+    return {
+      title,
+      titleTemplate,
+      meta: metaWrapper(title, description, url)
+    };
+  }
+})
 export default class SignUp extends Vue {
   details = {} as LoginManager.RegistrationDetails;
   login_response = {} as LoginManager.LoginResponse;

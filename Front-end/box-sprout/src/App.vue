@@ -151,8 +151,94 @@
 <script lang="ts" scoped>
 import User from "@/models/user";
 import { Component, Vue } from "vue-property-decorator";
+import { MetaInfo } from "vue-meta";
 
-@Component
+export const titleTemplate = (chunk: string) =>
+  chunk ? `${chunk} - BoxSprout` : "BoxSprout";
+
+const urlTemplate = process.env.BASE_URL + "%s";
+
+const metaDescriptions = (str: string): any[] => {
+  return [
+    { vmid: "description", name: "description", content: str },
+    { vmid: "twitter:description", name: "twitter:description", content: str },
+    { vmid: "og:description", property: "og:description", content: str },
+    { vmid: "prop:description", itemprop: "description", content: str }
+  ];
+};
+
+const metaTitles = (str: string): any[] => {
+  return [
+    {
+      vmid: "twitter:title",
+      name: "twitter:title",
+      content: str,
+      template: titleTemplate
+    },
+    {
+      vmid: "og:title",
+      property: "og:title",
+      content: str,
+      template: titleTemplate
+    },
+    {
+      vmid: "prop:title",
+      itemprop: "name",
+      content: str,
+      template: titleTemplate
+    }
+  ];
+};
+
+const metaUrls = (str: string): any[] => {
+  return [
+    { vmid: "og:url", property: "og:url", content: str, template: urlTemplate }
+  ];
+};
+
+export const metaWrapper = (
+  title: string,
+  description: string,
+  url: string
+): any[] =>
+  metaDescriptions(description)
+    .concat(metaTitles(title))
+    .concat(metaUrls(url));
+
+@Component({
+  metaInfo() {
+    const title = "";
+    const description = "BoxSprout";
+    const url = "";
+
+    return {
+      title,
+      titleTemplate,
+      meta: [
+        { name: "viewport", contect: "width=device-width,initial-scale=1.0" },
+        {
+          property: "og:site_name",
+          content: "BoxSprout",
+          vmid: "og:site_name"
+        },
+        {
+          property: "og:type",
+          content: "website",
+          vmid: "og:type"
+        },
+        {
+          property: "og:image",
+          content: require("@/assets/Logo.svg"),
+          vmid: "og:image"
+        },
+        {
+          itemprop: "image",
+          content: require("@/assets/Logo.svg")
+        }
+      ].concat(metaWrapper(title, description, url))
+    };
+  }
+})
 export default class App extends Vue {
   user = User;
 }
@@ -329,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
   footer {
     h3 {
       font-family: "Fredoka One", "Open Sans", Helvetica, Arial, sans-serif;
-      color: $high-contrast;
+      color: $white;
     }
 
     p {

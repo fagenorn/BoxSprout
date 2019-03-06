@@ -70,8 +70,21 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { metaWrapper, titleTemplate } from "@/App.vue";
 
-@Component
+@Component({
+  metaInfo() {
+    const title = "Home";
+    const description = "Home page";
+    const url = "home";
+
+    return {
+      title,
+      titleTemplate,
+      meta: metaWrapper(title, description, url)
+    };
+  }
+})
 export default class Home extends Vue {}
 </script>
 

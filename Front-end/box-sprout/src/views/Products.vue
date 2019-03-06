@@ -20,8 +20,20 @@
 import Product from "@/components/Product.vue";
 import { Component, Vue } from "vue-property-decorator";
 import ProductManager from "@/models/product";
+import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
+  metaInfo() {
+    const title = "Products";
+    const description = "Overview of available BoxSprout products.";
+    const url = "products";
+
+    return {
+      title,
+      titleTemplate,
+      meta: metaWrapper(title, description, url)
+    };
+  },
   components: {
     product: Product
   }

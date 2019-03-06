@@ -24,6 +24,26 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import { metaWrapper, titleTemplate } from "@/App.vue";
+
+@Component({
+  metaInfo() {
+    const title = "Not Found";
+    const description = "The page you were looking for wasn't found.";
+    const url = "404";
+
+    return {
+      title,
+      titleTemplate,
+      meta: metaWrapper(title, description, url)
+    };
+  }
+})
+export default class NotFound extends Vue {}
+</script>
+
 <style lang="scss" scoped>
 div {
   &.hero {

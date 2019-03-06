@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import Meta from "vue-meta";
 
 const About = () =>
   import(/* webpackChunkName: "products" */ "./views/About.vue");
@@ -14,6 +15,7 @@ const NotFound = () =>
   import(/* webpackChunkName: "log in" */ "./views/NotFound.vue");
 
 Vue.use(Router);
+Vue.use(Meta);
 
 export default new Router({
   mode: "history",
