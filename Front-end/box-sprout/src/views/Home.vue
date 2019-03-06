@@ -5,7 +5,7 @@
         <div class="container has-text-right">
           <div class="columns">
             <div class="column is-half">
-              <img class="is-unselectable" src="@/assets/Logo.svg" />
+              <img class="is-unselectable" src="@/assets/Logo.svg" alt="logo" />
             </div>
             <div class="column is-half">
               <h1
@@ -38,19 +38,28 @@
         <div class="tile is-4 is-vertical is-parent">
           <div class="tile is-child box">
             <figure class="image is-16by9">
-              <img src="https://via.placeholder.com/512x288" />
+              <img
+                src="https://via.placeholder.com/512x288"
+                alt="placeholder"
+              />
             </figure>
           </div>
           <div class="tile is-child box">
             <figure class="image is-16by9">
-              <img src="https://via.placeholder.com/512x288" />
+              <img
+                src="https://via.placeholder.com/512x288"
+                alt="placeholder"
+              />
             </figure>
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
             <figure class="image is-5by3">
-              <img src="https://via.placeholder.com/1000x600" />
+              <img
+                src="https://via.placeholder.com/1000x600"
+                alt="placeholder"
+              />
             </figure>
           </div>
         </div>

@@ -7,7 +7,7 @@
     >
       <div class="navbar-brand">
         <div class="navbar-item" href="#">
-          <img src="@/assets/LogoNoText.svg" />
+          <img src="@/assets/LogoNoText.svg" alt="logo" />
         </div>
 
         <a
@@ -108,28 +108,39 @@
     </div>
     <footer class="footer">
       <div class="content has-text-centered">
-        <p><strong>BoxSprout</strong></p>
+        <h3>BoxSprout</h3>
         <p>
           Created by
           <a
+            class="swirly-link"
             href="https://www.linkedin.com/in/eduard-monstrey-16904663/"
             target="_blank"
-            ><strong>Eduard Monstrey</strong></a
+            rel="noopener noreferrer nofollow"
+            >Eduard Monstrey</a
           >,
           <a
+            class="swirly-link"
             href="https://www.linkedin.com/in/philippe-gilops-3971346b/"
             target="_blank"
+            rel="noopener noreferrer nofollow"
           >
-            <strong>Philippe Gilops</strong></a
+            Philippe Gilops</a
           >,
           <a
+            class="swirly-link"
             href="https://www.linkedin.com/in/martijn-gilis-3a255617b/"
             target="_blank"
+            rel="noopener noreferrer nofollow"
           >
-            <strong>Martijn Gilis</strong></a
+            Martijn Gilis</a
           >, and
-          <a href="https://www.linkedin.com/in/anis-sakkaf/" target="_blank">
-            <strong>Anis Sakkaf</strong></a
+          <a
+            class="swirly-link"
+            href="https://www.linkedin.com/in/anis-sakkaf/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            Anis Sakkaf</a
           >.
         </p>
       </div>
@@ -313,6 +324,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
   .root {
     min-height: 100vh;
+  }
+
+  footer {
+    h3 {
+      font-family: "Fredoka One", "Open Sans", Helvetica, Arial, sans-serif;
+      color: $high-contrast;
+    }
+
+    p {
+      color: $high-contrast;
+    }
+  }
+
+  a {
+    &.swirly-link {
+      font-weight: 600;
+      position: relative;
+      text-decoration: none;
+      padding: 10px;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background: $high-contrast;
+        height: 2px;
+        width: 0;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+      }
+
+      &:before {
+        bottom: 0;
+        left: 0;
+      }
+
+      &:after {
+        top: 0;
+        right: 0;
+      }
+
+      &:hover:before,
+      &:hover:after {
+        width: 100%;
+      }
+    }
   }
 }
 </style>

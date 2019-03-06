@@ -5,6 +5,8 @@ $c: #949255;
 $d: #b18834;
 $e: #6c5f3d;
 
+$high-contrast: #49240D;
+
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
@@ -35,6 +37,6 @@ $colors: (
 );
 
 // Links
-$link: $e;
+$link: $high-contrast;
 $link-invert: findColorInvert($link);
 $link-focus-border: $e;
