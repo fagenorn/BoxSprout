@@ -11,20 +11,14 @@ import Loading from "vue-loading-overlay";
 import User from "@/models/user";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faSignInAlt,
-  faSignOutAlt,
-  faEnvelope,
-  faLock,
-  faUser
-} from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons/faSignInAlt";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
+import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faSignInAlt);
-library.add(faSignOutAlt);
-library.add(faEnvelope);
-library.add(faLock);
-library.add(faUser);
+library.add(faSignInAlt, faSignOutAlt, faEnvelope, faLock, faUser);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component("loading", Loading);

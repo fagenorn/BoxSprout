@@ -1,7 +1,7 @@
-import { MetaInfo } from 'vue-meta';
+import { MetaInfo } from "vue-meta";
 
 declare module "vue/types/vue" {
-    interface Vue {
-        metaInfo(): MetaInfo | (() => MetaInfo)
-    }
+  interface Vue {
+    metaInfo(): MetaInfo | (() => MetaInfo);
+  }
 }

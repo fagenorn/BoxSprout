@@ -1,5 +1,5 @@
 <template>
-  <section class="section hero is-small">
+  <section class="section hero is-small sign-up">
     <div class="container">
       <div class="hero-body">
         <div class="columns is-vcentered">

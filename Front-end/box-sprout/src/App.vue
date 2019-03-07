@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
   footer {
     h3 {
       font-family: "Fredoka One", "Open Sans", Helvetica, Arial, sans-serif;
-      color: $white;
+      color: $high-contrast;
     }
 
     p {
@@ -436,9 +436,6 @@ document.addEventListener("DOMContentLoaded", () => {
         background: $high-contrast;
         height: 2px;
         width: 0;
-        -webkit-transition: width 0.5s ease-in-out;
-        -moz-transition: width 0.5s ease-in-out;
-        -o-transition: width 0.5s ease-in-out;
         transition: width 0.5s ease-in-out;
       }
 
