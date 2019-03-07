@@ -1,7 +1,3 @@
-const path = require("path");
-const PrerenderSPAPlugin = require("prerender-spa-plugin");
-const JSDOMRenderer = require("@prerenderer/renderer-jsdom");
-
 module.exports = {
   css: {
     loaderOptions: {
@@ -12,17 +8,5 @@ module.exports = {
         `
       }
     }
-  },
-  configureWebpack:
-    process.env.NODE_ENV === "production"
-      ? {
-          plugins: [
-            new PrerenderSPAPlugin({
-              staticDir: path.join(__dirname, "dist"),
-              routes: ["/"],
-              renderer: new JSDOMRenderer()
-            })
-          ]
-        }
-      : undefined
+  }
 };
