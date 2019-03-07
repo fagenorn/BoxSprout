@@ -1,3 +1,6 @@
+const path = require("path");
+const PrerenderSPAPlugin = require("prerender-spa-plugin");
+
 module.exports = {
   css: {
     loaderOptions: {
@@ -8,5 +11,16 @@ module.exports = {
         `
       }
     }
-  }
+  },
+  configureWebpack:
+    process.env.NODE_ENV === "production"
+      ? {
+          plugins: [
+            new PrerenderSPAPlugin({
+              staticDir: path.join(__dirname, "dist"),
+              routes: ["/"]
+            })
+          ]
+        }
+      : undefined
 };

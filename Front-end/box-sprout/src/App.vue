@@ -215,7 +215,6 @@ export const metaWrapper = (
       title,
       titleTemplate,
       meta: [
-        { name: "viewport", contect: "width=device-width,initial-scale=1.0" },
         {
           property: "og:site_name",
           content: "BoxSprout",
