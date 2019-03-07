@@ -5,8 +5,13 @@
     font-style: normal;
     font-display: block;
     font-weight: $weight;
+    src: url($filepath + '.eot');
     src: local("#{$style-name}"), local("#{$file}"),
-      url($filepath + ".ttf") format("truetype");
+       url($filepath + '.eot?#iefix') format('embedded-opentype'),
+       url($filepath + '.woff2') format('woff2'),
+       url($filepath + '.woff') format('woff'),
+       url($filepath + '.ttf') format('truetype'),
+       url("#{$filepath}.svg##{$file}") format('svg');
   }
 }
 
