@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use jeremykenedy\LaravelRoles\Models\Role;
 
 class UsersTableSeeder extends Seeder
 {
@@ -23,19 +24,27 @@ class UsersTableSeeder extends Seeder
         // will be too slow.
         $password = Hash::make('admin');
 
-        User::create([
+        $admin = User::create([
             'name' => 'Administrator',
             'email' => 'admin@admin.com',
             'password' => $password,
         ]);
 
+        // Set admin role
+        $role = Role::where('name', '=', 'Admin')->first();
+        $admin->attachRole($role);
+
         // And now let's generate a few dozen users for our app:
         for ($i = 0; $i < 10; $i++) {
-            User::create([
+            $user = User::create([
                 'name' => $faker->name,
                 'email' => $faker->email,
                 'password' => $password,
             ]);
+
+            // Set user role
+            $role = Role::where('name', '=', 'User')->first();
+            $user->attachRole($role);
         }
     }
 }
