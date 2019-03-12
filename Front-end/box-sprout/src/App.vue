@@ -71,7 +71,7 @@
             <div class="buttons">
               <router-link
                 to="/sign-up"
-                class="button is-dark is-outlined is-rounded hvr-grow"
+                class="button is-high-con is-outlined is-rounded hvr-grow"
               >
                 <span>Sign up</span>
               </router-link>
