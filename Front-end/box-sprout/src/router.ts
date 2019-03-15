@@ -7,6 +7,8 @@ const About = () =>
   import(/* webpackChunkName: "products" */ "./views/About.vue");
 const Products = () =>
   import(/* webpackChunkName: "products" */ "./views/Products.vue");
+const Order = () =>
+  import(/* webpackChunkName: "products" */ "./views/Order.vue");
 const Login = () =>
   import(/* webpackChunkName: "log in" */ "./views/Login.vue");
 const SignUp = () =>
@@ -35,6 +37,11 @@ export default new Router({
       path: "/products",
       name: "products",
       component: Products
+    },
+    {
+      path: "/order",
+      name: "order",
+      component: Order
     },
     {
       path: "/log-in",

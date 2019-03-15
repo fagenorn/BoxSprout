@@ -16,9 +16,10 @@ import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faSignInAlt, faSignOutAlt, faEnvelope, faLock, faUser);
+library.add(faSignInAlt, faSignOutAlt, faEnvelope, faLock, faUser, faGlobe);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component("loading", Loading);
