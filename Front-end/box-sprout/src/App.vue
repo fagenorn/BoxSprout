@@ -25,25 +25,25 @@
 
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-end  is-hidden-desktop">
-          <router-link to="/" class="navbar-item">
+          <router-link :to="{ name: 'home' }" class="navbar-item">
             <span>Home</span>
           </router-link>
 
-          <router-link to="/products" class="navbar-item">
+          <router-link :to="{ name: 'products' }" class="navbar-item">
             <span>Products</span>
           </router-link>
 
-          <router-link to="/about" class="navbar-item">
+          <router-link :to="{ name: 'about' }" class="navbar-item">
             <span>About</span>
           </router-link>
 
           <div class="navbar-divider" />
           <div v-if="!user.isLoggedIn">
-            <router-link to="/sign-up" class="navbar-item">
+            <router-link :to="{ name: 'sign up' }" class="navbar-item">
               <span>Sign up</span>
             </router-link>
 
-            <router-link to="/log-in" class="navbar-item">
+            <router-link :to="{ name: 'login' }" class="navbar-item">
               <span>Log in</span>
             </router-link>
           </div>
@@ -54,31 +54,34 @@
           </div>
         </div>
 
-        <div class="navbar-end  is-hidden-touch">
-          <router-link to="/" class="navbar-item alternate hvr-shadow">
+        <div class="navbar-end is-hidden-touch">
+          <router-link :to="{ name: 'home' }" class="navbar-item hvr-shadow">
             <span>Home</span>
           </router-link>
 
-          <router-link to="/products" class="navbar-item alternate hvr-shadow">
+          <router-link
+            :to="{ name: 'products' }"
+            class="navbar-item hvr-shadow"
+          >
             <span>Products</span>
           </router-link>
 
-          <router-link to="/about" class="navbar-item alternate hvr-shadow">
+          <router-link :to="{ name: 'about' }" class="navbar-item hvr-shadow">
             <span>About</span>
           </router-link>
 
           <div class="navbar-item" v-if="!user.isLoggedIn">
             <div class="buttons">
               <router-link
-                to="/sign-up"
+                :to="{ name: 'sign up' }"
                 class="button is-high-con is-outlined is-rounded hvr-grow"
               >
                 <span>Sign up</span>
               </router-link>
 
               <router-link
-                to="/log-in"
-                class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow"
+                :to="{ name: 'login' }"
+                class="button is-high-con is-outlined is-rounded hvr-icon-push hvr-grow active-fill"
               >
                 <span class="icon hvr-icon">
                   <font-awesome-icon icon="sign-in-alt" />
@@ -91,7 +94,7 @@
             <div class="buttons">
               <a
                 @click="user.logout()"
-                class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow"
+                class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow active-fill"
               >
                 <span class="icon hvr-icon">
                   <font-awesome-icon icon="sign-out-alt" />
@@ -324,84 +327,38 @@ document.addEventListener("DOMContentLoaded", () => {
         margin: 15px 40px;
       }
 
-      .alternate {
-        $btn-width: 200px !default;
-        $btn-height: 45px !default;
-        $btn-color: $e;
-        $btn-color-dark: shade($btn-color, 40%);
-        position: relative;
-        display: block;
-        overflow: hidden;
-        @include size(100%, $btn-height);
-        max-width: $btn-width;
-        text-transform: uppercase;
-        padding: 0.4rem 2rem;
-        margin: 3px 2px;
-        color: darken($btn-color, 25);
+      .navbar-end {
+        &.is-hidden-touch {
+          > a {
+            $btn-width: 200px !default;
+            $btn-height: 45px !default;
+            $btn-color: $e;
+            $btn-color-dark: shade($btn-color, 40%);
+            position: relative;
+            display: block;
+            @include size(100%, $btn-height);
+            max-width: $btn-width;
+            text-transform: uppercase;
+            padding: 0.4rem 2rem;
+            margin: 3px 2px;
+            color: darken($btn-color, 25);
 
-        &:before,
-        &:after {
-          z-index: -1;
-          box-sizing: border-box;
-          transition: 0.5s ease-in-out;
-          content: "";
-          @include absolute(0);
-          @include size(25.25%, 0);
-          background-color: $btn-color-dark;
-        }
-        &:before {
-          left: 0;
-        }
-        &:after {
-          left: 50%;
-        }
+            &:hover,
+            &:focus,
+            &.router-link-exact-active {
+              color: #dad7cf;
 
-        span {
-          padding-top: 5px;
-          transition: none;
-
-          &:before,
-          &:after {
-            z-index: -1;
-            box-sizing: border-box;
-            transition: 0.5s ease-in-out;
-            content: "";
-            @include absolute(0);
-            @include size(25.25%, 0);
-            background-color: $btn-color-dark;
-            top: auto;
-            bottom: 0;
+              background-color: $btn-color-dark;
+            }
           }
-          &:before {
-            left: 25%;
+
+          .buttons {
+            .router-link-exact-active {
+              color: #fff;
+
+              background: $high-contrast;
+            }
           }
-          &:after {
-            left: 75%;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          line-height: $btn-height;
-          color: black;
-        }
-
-        &:hover {
-          color: tint($btn-color, 75%);
-          background: transparent !important;
-
-          &:before,
-          &:after,
-          span:before,
-          span:after {
-            height: $btn-height;
-          }
-        }
-
-        &:focus {
-          color: #dad7cf;
-
-          background-color: $btn-color-dark;
         }
       }
     }

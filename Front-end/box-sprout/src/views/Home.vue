@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home is-centered">
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container has-text-right">
@@ -89,19 +89,17 @@ export default class Home extends Vue {}
 </script>
 
 <style scoped lang="scss">
-.container {
-  margin: 20px 10px;
-}
-
-section {
-  &.hero {
-    min-height: 100vh;
-    background: linear-gradient(165deg, $primary 35%, rgba($b, 0.85) 131%);
-    .links {
-      margin-top: 2em;
-    }
-    h1 {
-      font-family: "Fredoka One", "Open Sans", Helvetica, Arial, sans-serif;
+.home {
+  section {
+    &.hero {
+      min-height: 100vh;
+      background: linear-gradient(165deg, $primary 35%, rgba($b, 0.85) 131%);
+      .links {
+        margin-top: 2em;
+      }
+      h1 {
+        font-family: "Fredoka One", "Open Sans", Helvetica, Arial, sans-serif;
+      }
     }
   }
 }

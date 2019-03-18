@@ -11,6 +11,8 @@
     </section>
 
     <div class="container is-fluid" ref="container">
+                <router-link :to="{ name: 'order', params: { userId: 123 }}">User</router-link>
+
       <loading :active.sync="isLoading" :is-full-page="false"></loading>
     </div>
   </div>
@@ -70,23 +72,15 @@ export default class Products extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.vld-overlay {
-  min-height: 300px;
-}
-
 .products {
   margin-bottom: 2em;
-}
 
-.columns {
-  margin: 0;
-}
+  .vld-overlay {
+    min-height: 300px;
+  }
 
-@media screen and (min-width: 768px) {
-  .columns {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
+  section.hero {
+    margin-bottom: 30px;
   }
 }
 </style>

@@ -137,7 +137,10 @@
                   class="button is-primary hvr-grow is-fullwidth"
                   v-bind:class="{ 'is-loading': loading }"
                 >
-                  Pay {{ price }}$ Using Bancontact
+                  <span class="icon is-small">
+                    <font-awesome-icon icon="credit-card" />
+                  </span>
+                  <span>Pay €{{ price }} using Bancontact</span>
                 </button>
               </div>
             </div>

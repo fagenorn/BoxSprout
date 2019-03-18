@@ -1,6 +1,7 @@
 import Vue from "vue";
 
 export interface ProductResponse {
+  id: number;
   title: string;
   description: string;
   price: number;
