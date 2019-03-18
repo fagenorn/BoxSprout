@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Laravel\Cashier\Billable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -10,7 +11,7 @@ use jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable, HasRoleAndPermission;
+    use HasApiTokens, Notifiable, HasRoleAndPermission, Billable;
 
     /**
      * The attributes that are mass assignable.

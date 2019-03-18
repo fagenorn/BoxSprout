@@ -16,6 +16,11 @@ class ProductManager {
     this.products = response.data.data;
     return this.products;
   }
+
+  public async getProduct(id: Number): Promise<ProductResponse> {
+    let response = await Vue.axios.get("/products/" + id);
+    return response.data.data as ProductResponse;
+  }
 }
 
 const productManager = new ProductManager();

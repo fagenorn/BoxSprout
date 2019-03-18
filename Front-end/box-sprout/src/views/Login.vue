@@ -85,6 +85,7 @@ import { Component, Vue } from "vue-property-decorator";
 import { AxiosResponse } from "axios";
 import { LoginManager } from "@/models/login";
 import { metaWrapper, titleTemplate } from "@/App.vue";
+import router from "@/router";
 
 @Component({
   metaInfo() {
@@ -107,7 +108,7 @@ export default class Login extends Vue {
     User.login(this.details).then(result => {
       this.login_response = result;
       if (!result.failed) {
-        alert(result.messages[0]);
+        router.push({ name: "products" });
       }
     });
   }

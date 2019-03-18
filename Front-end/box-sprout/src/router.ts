@@ -9,6 +9,8 @@ const Products = () =>
   import(/* webpackChunkName: "products" */ "./views/Products.vue");
 const Order = () =>
   import(/* webpackChunkName: "products" */ "./views/Order.vue");
+const ConfirmOrder = () =>
+  import(/* webpackChunkName: "products" */ "./views/OrderConfirm.vue");
 const Login = () =>
   import(/* webpackChunkName: "log in" */ "./views/Login.vue");
 const SignUp = () =>
@@ -42,6 +44,11 @@ export default new Router({
       path: "/order",
       name: "order",
       component: Order
+    },
+    {
+      path: "/confirm-order",
+      name: "confirm order",
+      component: ConfirmOrder
     },
     {
       path: "/log-in",

@@ -19,6 +19,12 @@ export interface SourceInfo {
   bancontact: {
     preferred_language: "nl" | "fr" | "en";
   };
+  metadata: any
+}
+
+export interface SourceId {
+  id: string;
+  client_secret: string;
 }
 
 export interface SourceResponse {
@@ -28,6 +34,7 @@ export interface SourceResponse {
 
 export interface StripeObject {
   createSource(info: SourceInfo): Promise<SourceResponse>;
+  retrieveSource(id: SourceId): Promise<SourceResponse>;
 }
 
 export interface StripeConstructor {

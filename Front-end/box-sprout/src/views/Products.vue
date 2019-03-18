@@ -11,8 +11,6 @@
     </section>
 
     <div class="container is-fluid" ref="container">
-                <router-link :to="{ name: 'order', params: { userId: 123 }}">User</router-link>
-
       <loading :active.sync="isLoading" :is-full-page="false"></loading>
     </div>
   </div>
@@ -51,7 +49,7 @@ export default class Products extends Vue {
     let subContainer = {} as HTMLDivElement;
     ProductManager.getProducts().then(products => {
       products.forEach((product, index) => {
-        let instance = new Product();
+        let instance = new Product({ router: this.$router });
         instance.details = product;
         instance.$mount();
 

@@ -3,9 +3,7 @@
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            Purchase %product_name%
-          </h1>
+          <h1 class="title">Purchase {{ product.title }}</h1>
           <h2 class="subtitle">
             Complete your shipping and payment details below
           </h2>
@@ -140,7 +138,7 @@
                   <span class="icon is-small">
                     <font-awesome-icon icon="credit-card" />
                   </span>
-                  <span>Pay €{{ price }} using Bancontact</span>
+                  <span>Pay &euro;{{ price }} using Bancontact</span>
                 </button>
               </div>
             </div>
@@ -152,6 +150,9 @@
 </template>
 
 <script lang="ts" scoped>
+import User from "@/models/user";
+import ProductManager from "@/models/product";
+import { ProductResponse } from "@/models/product";
 import { Component, Vue } from "vue-property-decorator";
 import {
   StripeObject,
@@ -159,14 +160,17 @@ import {
   SourceResponse,
   StripeConstructor
 } from "@/models/stripe";
+import router from "@/router";
 
 declare var Stripe: StripeConstructor;
 
 @Component
 export default class Order extends Vue {
+  product = {} as ProductResponse;
+
   payment_info = {
     type: "bancontact",
-    amount: 999,
+    amount: Number.MAX_SAFE_INTEGER,
     currency: "eur",
     owner: {
       name: "",
@@ -180,10 +184,14 @@ export default class Order extends Vue {
       }
     },
     redirect: {
-      return_url: location.protocol + "//" + location.host
+      return_url: ""
     },
     bancontact: {
       preferred_language: "nl"
+    },
+    metadata: {
+      user: 0,
+      product: 0
     }
   } as SourceInfo;
 
@@ -204,20 +212,51 @@ export default class Order extends Vue {
     this.loading = true;
     this.error.has_error = false;
 
-    this.stripe.createSource(this.payment_info).then(result => {
-      console.log(result);
+    if (!User.isLoggedIn) {
+      router.push({ name: "sign up" });
+      return;
+    }
 
+    this.stripe.createSource(this.payment_info).then(result => {
       if (result.error) {
         this.error.has_error = true;
         this.error.message = result.error.message;
       }
 
       if (result.source) {
-        window.location = result.source.redirect.url;
+        window.location.href = result.source.redirect.url;
         return;
       }
 
       this.loading = false;
+    });
+  }
+
+  mounted() {
+    if (!User.isLoggedIn) {
+      router.push({ name: "sign up" });
+      return;
+    }
+
+    this.payment_info.redirect.return_url =
+      location.protocol +
+      "//" +
+      location.host +
+      this.$router.resolve({
+        name: "confirm order"
+      }).href;
+
+    this.payment_info.owner.name = User.userDetails.name;
+    this.payment_info.owner.email = User.userDetails.email;
+
+    const id = parseInt(this.$route.query.id as string);
+
+    ProductManager.getProduct(id).then(result => {
+      this.product = result;
+      this.payment_info.amount = this.product.price;
+
+      this.payment_info.metadata.user = User.userDetails.id;
+      this.payment_info.metadata.product = this.product.id;
     });
   }
 }

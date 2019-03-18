@@ -2,6 +2,7 @@ import Vue from "vue";
 import { LoginManager } from "./login";
 
 interface UserResponse {
+  id: number;
   email: string;
   name: string;
 }
@@ -16,9 +17,9 @@ class User {
 
     if (token) {
       try {
+        this.isLoggedIn = true;
         let response = await Vue.axios.get("/user");
         this.userDetails = response.data.data;
-        this.isLoggedIn = true;
       } catch (error) {
         this.loginFailed();
       }

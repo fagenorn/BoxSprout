@@ -23,3 +23,8 @@ Route::middleware('auth:api')->group(function () {
         Route::put('products/{product}/image', 'ProductController@update_image');
     });
 });
+
+Route::post(
+    'stripe/webhook',
+    '\App\Http\Controllers\WebhookController@handleWebhook'
+);
