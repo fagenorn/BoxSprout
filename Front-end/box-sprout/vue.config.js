@@ -12,7 +12,10 @@ module.exports = {
   pwa: {
     name: "BoxSprout",
     themeColor: "#889f43",
-    msTileColor: "#6c5f3d"
+    msTileColor: "#6c5f3d",
+    workboxOptions: {
+      skipWaiting: true
+    }
   },
   chainWebpack: config => {
     const imgRule = config.module.rule("images");
