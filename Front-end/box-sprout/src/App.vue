@@ -120,7 +120,7 @@
             target="_blank"
             rel="noopener noreferrer nofollow"
             >Eduard Monstrey</a
-          >,
+          >|
           <a
             class="swirly-link"
             href="https://www.linkedin.com/in/philippe-gilops-3971346b/"
@@ -128,7 +128,7 @@
             rel="noopener noreferrer nofollow"
           >
             Philippe Gilops</a
-          >,
+          >|
           <a
             class="swirly-link"
             href="https://www.linkedin.com/in/martijn-gilis-3a255617b/"
@@ -136,14 +136,13 @@
             rel="noopener noreferrer nofollow"
           >
             Martijn Gilis</a
-          >, and
+          >|
           <a
             class="swirly-link"
             href="https://www.linkedin.com/in/anis-sakkaf/"
             target="_blank"
             rel="noopener noreferrer nofollow"
-          >
-            Anis Sakkaf</a
+            >Anis Sakkaf</a
           >.
         </p>
       </div>
