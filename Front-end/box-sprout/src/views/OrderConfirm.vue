@@ -62,6 +62,8 @@ export default class Order extends Vue {
         if (result.error) {
           // this.error.has_error = true;
           // this.error.message = result.error.message;
+          alert("Error.");
+          return;
         }
 
         if (result.source) {
@@ -80,7 +82,8 @@ export default class Order extends Vue {
           } else {
             this.status = {
               title: "Processing Payment...",
-              description: "We are waiting for your payment to be confirmed."
+              description:
+                "We are waiting for your payment to be confirmed. The page will automatically refresh."
             };
             this.pollCount += 1;
 

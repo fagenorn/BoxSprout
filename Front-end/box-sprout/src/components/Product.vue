@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-image">
         <div class="price-tag is-rounded is-primary">
-          <span>&euro;{{ price }}</span>
+          <span>{{ price }}</span>
         </div>
         <figure class="image is-4by3">
           <img :src="details.image" :alt="details.title" />
@@ -50,14 +50,13 @@ export default class Product extends Vue {
     z-index: 1;
     right: 0;
     top: 0;
-    width: 85px;
-    height: 85px;
-    padding: 5px;
+    width: 75px;
+    height: 75px;
     margin: -20px -15px;
 
     background: linear-gradient(165deg, $primary 35%, rgba($b, 0.85) 131%);
     border-radius: 50%;
-    border: 3px $high-contrast solid;
+    // border: 3px $high-contrast solid;
 
     display: flex;
     flex-direction: column;
@@ -69,7 +68,13 @@ export default class Product extends Vue {
     span {
       font-size: 22px;
       font-weight: 700;
-      color: $high-contrast;
+      color: $white;
+
+      &:before {
+        content: "€";
+        font-size: 16px;
+        vertical-align: text-top;
+      }
     }
   }
 

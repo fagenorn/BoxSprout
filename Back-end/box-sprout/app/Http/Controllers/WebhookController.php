@@ -21,7 +21,7 @@ class WebhookController extends CashierController
             $product = Product::find($payload['data']['object']['metadata']['product']);
             $user->charge($product->price, ['source' => $payload['data']['object']['id']]);
         } catch (Exception $e) {
-// ignored
+            // ignored
         }
     }
 }
