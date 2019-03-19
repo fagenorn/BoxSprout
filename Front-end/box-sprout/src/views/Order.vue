@@ -208,11 +208,26 @@ export default class Order extends Vue {
 
   stripe = Stripe(process.env.VUE_APP_STRIPE_KEY);
 
+  showLoginToast() {
+    this.$toasted.info("You need to sign up first.", {
+      duration: 80000,
+      action: {
+        text: "Log in",
+        class: "color-white",
+        onClick: (e, toastObject) => {
+          toastObject.goAway(0);
+          router.push({ name: "login" });
+        }
+      }
+    });
+  }
+
   checkout() {
     this.loading = true;
     this.error.has_error = false;
 
     if (!User.isLoggedIn) {
+      this.showLoginToast();
       router.push({ name: "sign up" });
       return;
     }
@@ -234,6 +249,7 @@ export default class Order extends Vue {
 
   mounted() {
     if (!User.isLoggedIn) {
+      this.showLoginToast();
       router.push({ name: "sign up" });
       return;
     }

@@ -94,6 +94,7 @@
                   <button
                     type="submit"
                     class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
+                    v-bind:class="{ 'is-loading': loading }"
                   >
                     Register
                   </button>
@@ -130,13 +131,17 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 export default class SignUp extends Vue {
   details = {} as LoginManager.RegistrationDetails;
   login_response = {} as LoginManager.LoginResponse;
+  loading = false;
 
   register() {
+    this.loading = true;
     User.register(this.details).then(result => {
       this.login_response = result;
       if (!result.failed) {
-        alert(result.messages[0]);
+        this.$router.push({ name: "products" });
+        this.$toasted.info(result.messages[0]);
       }
+      this.loading = false;
     });
   }
 }

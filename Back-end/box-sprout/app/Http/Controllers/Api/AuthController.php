@@ -34,6 +34,15 @@ class AuthController extends Controller
     }
 
     public function login (Request $request) {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string',
+        ]);
+
+        if ($validator->fails())
+        {
+            return response(['errors'=>$validator->errors()->all()], 422);
+        }
 
         $user = User::where('email', $request->email)->first();
 
@@ -44,12 +53,13 @@ class AuthController extends Controller
                 $response = ['token' => $token];
                 return response($response, 200);
             } else {
-                $response = [ 'error' => 'Password missmatch' ];
+                // Incorrect password
+                $response = [ 'error' => 'Incorrect email and/or password' ];
                 return response($response, 422);
             }
-
         } else {
-            $response = [ 'error' => 'User does not exist' ];
+            // User doesn't exist
+            $response = [ 'error' => 'Incorrect email and/or password' ];
             return response()->json($response, 422);
         }
 

@@ -10,6 +10,8 @@ import Loading from "vue-loading-overlay";
 
 import User from "@/models/user";
 
+import Toasted from "vue-toasted";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons/faSignInAlt";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons/faSignOutAlt";
@@ -20,7 +22,15 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons/faCreditCard";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faSignInAlt, faSignOutAlt, faEnvelope, faLock, faUser, faGlobe, faCreditCard);
+library.add(
+  faSignInAlt,
+  faSignOutAlt,
+  faEnvelope,
+  faLock,
+  faUser,
+  faGlobe,
+  faCreditCard
+);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component("loading", Loading);
@@ -33,5 +43,10 @@ new Vue({
 }).$mount("#app");
 
 Vue.use(VueAxios, axios);
+Vue.use(Toasted,{ 
+  theme: "toasted-primary", 
+  position: "bottom-right", 
+  duration : 4000
+});
 
 User.initialize();

@@ -39,7 +39,6 @@
                     type="email"
                     placeholder="e.g. bruce@batcave.io"
                     class="input is-size-4 is-size-5-mobile"
-                    required
                   />
                   <span class="icon is-left is-size-4 is-size-5-mobile">
                     <font-awesome-icon icon="envelope" />
@@ -54,7 +53,6 @@
                     type="password"
                     placeholder="e.g. ***********"
                     class="input is-size-4 is-size-5-mobile"
-                    required
                   />
                   <span class="icon is-left is-size-4 is-size-5-mobile">
                     <font-awesome-icon icon="lock" />
@@ -66,6 +64,7 @@
                   <button
                     type="submit"
                     class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
+                    v-bind:class="{ 'is-loading': loading }"
                   >
                     Submit
                   </button>
@@ -85,7 +84,6 @@ import { Component, Vue } from "vue-property-decorator";
 import { AxiosResponse } from "axios";
 import { LoginManager } from "@/models/login";
 import { metaWrapper, titleTemplate } from "@/App.vue";
-import router from "@/router";
 
 @Component({
   metaInfo() {
@@ -103,13 +101,18 @@ import router from "@/router";
 export default class Login extends Vue {
   details = {} as LoginManager.LoginDetails;
   login_response = {} as LoginManager.LoginResponse;
+  loading = false;
 
   login() {
+    this.loading = true;
     User.login(this.details).then(result => {
       this.login_response = result;
       if (!result.failed) {
-        router.push({ name: "products" });
+        this.$router.push({ name: "products" });
+        this.$toasted.info(result.messages[0]);
       }
+
+      this.loading = false;
     });
   }
 }
