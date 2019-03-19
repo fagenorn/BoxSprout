@@ -210,7 +210,7 @@ export default class Order extends Vue {
 
   showLoginToast() {
     this.$toasted.info("You need to sign up first.", {
-      duration: 80000,
+      duration: 8000,
       action: {
         text: "Log in",
         class: "color-white",
