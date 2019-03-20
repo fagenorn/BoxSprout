@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Product Overview
+            {{ $t("be.boxsprout.products.title") }}
           </h1>
         </div>
       </div>
@@ -24,8 +24,10 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
   metaInfo() {
-    const title = "Products";
-    const description = "Overview of available BoxSprout products.";
+    const title = this.$t("be.boxsprout.products.meta.title") as string;
+    const description = this.$t(
+      "be.boxsprout.products.meta.description"
+    ) as string;
     const url = "products";
 
     return {

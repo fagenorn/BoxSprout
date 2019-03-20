@@ -1,4 +1,5 @@
 import Vue from "vue";
+import i18n from "@/i18n";
 
 export namespace LoginManager {
   export interface LoginDetails {
@@ -27,7 +28,7 @@ export namespace LoginManager {
           failed: response.data.error,
           messages: response.data.errors ||
             (response.data.error ? [response.data.error] : null) || [
-              "Login success!"
+              i18n.t("be.boxsprout.model.login.success-login")
             ],
           token: response.data.token
         };
@@ -47,14 +48,16 @@ export namespace LoginManager {
         let response = await Vue.axios.post("/register", details);
         return {
           failed: response.data.errors,
-          messages: response.data.errors || ["Registration success!"],
+          messages: response.data.errors || [
+            i18n.t("be.boxsprout.model.login.success-register")
+          ],
           token: response.data.token
         };
       } catch (error) {
         return {
           failed: true,
           messages: error.response.data.errors || [
-            "Failed to register. (Critical)"
+            i18n.t("be.boxsprout.model.login.failed-register")
           ],
           token: null
         };

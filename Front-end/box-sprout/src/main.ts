@@ -21,6 +21,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons/faCreditCard";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import i18n from "./i18n";
 
 library.add(
   faSignInAlt,
@@ -39,14 +40,15 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  i18n,
   render: h => h(App)
 }).$mount("#app");
 
 Vue.use(VueAxios, axios);
-Vue.use(Toasted,{ 
-  theme: "toasted-primary", 
-  position: "bottom-right", 
-  duration : 4000
+Vue.use(Toasted, {
+  theme: "toasted-primary",
+  position: "bottom-right",
+  duration: 4000
 });
 
 User.initialize();

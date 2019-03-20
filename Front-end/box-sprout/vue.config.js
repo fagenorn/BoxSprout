@@ -9,6 +9,7 @@ module.exports = {
       }
     }
   },
+
   pwa: {
     name: "BoxSprout",
     themeColor: "#889f43",
@@ -17,6 +18,7 @@ module.exports = {
       skipWaiting: true
     }
   },
+
   chainWebpack: config => {
     const imgRule = config.module.rule("images");
     imgRule
@@ -30,5 +32,14 @@ module.exports = {
         };
         return ret;
       });
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: "en",
+      fallbackLocale: "en",
+      localeDir: "locales",
+      enableInSFC: true
+    }
   }
 };

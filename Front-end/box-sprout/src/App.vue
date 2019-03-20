@@ -8,6 +8,7 @@
       <div class="navbar-brand">
         <div class="navbar-item" href="#">
           <img src="@/assets/LogoNoText.svg" alt="logo" />
+          <locale-changer></locale-changer>
         </div>
 
         <a
@@ -26,48 +27,48 @@
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-end  is-hidden-desktop">
           <router-link :to="{ name: 'home' }" class="navbar-item">
-            <span>Home</span>
+            <span>{{ $t("be.boxsprout.app.nav.home") }}</span>
           </router-link>
 
           <router-link :to="{ name: 'products' }" class="navbar-item">
-            <span>Products</span>
+            <span>{{ $t("be.boxsprout.app.nav.products") }}</span>
           </router-link>
 
           <router-link :to="{ name: 'about' }" class="navbar-item">
-            <span>About</span>
+            <span>{{ $t("be.boxsprout.app.nav.about") }}</span>
           </router-link>
 
           <div class="navbar-divider" />
           <div v-if="!user.isLoggedIn">
             <router-link :to="{ name: 'sign up' }" class="navbar-item">
-              <span>Sign up</span>
+              <span>{{ $t("be.boxsprout.app.nav.sign-up") }}</span>
             </router-link>
 
             <router-link :to="{ name: 'login' }" class="navbar-item">
-              <span>Log in</span>
+              <span>{{ $t("be.boxsprout.app.nav.log-in") }}</span>
             </router-link>
           </div>
           <div v-else>
             <a @click="user.logout()" class="navbar-item">
-              <span>Log out</span>
+              <span>{{ $t("be.boxsprout.app.nav.log-out") }}</span>
             </a>
           </div>
         </div>
 
         <div class="navbar-end is-hidden-touch">
           <router-link :to="{ name: 'home' }" class="navbar-item hvr-shadow">
-            <span>Home</span>
+            <span>{{ $t("be.boxsprout.app.nav.home") }}</span>
           </router-link>
 
           <router-link
             :to="{ name: 'products' }"
             class="navbar-item hvr-shadow"
           >
-            <span>Products</span>
+            <span>{{ $t("be.boxsprout.app.nav.products") }}</span>
           </router-link>
 
           <router-link :to="{ name: 'about' }" class="navbar-item hvr-shadow">
-            <span>About</span>
+            <span>{{ $t("be.boxsprout.app.nav.about") }}</span>
           </router-link>
 
           <div class="navbar-item" v-if="!user.isLoggedIn">
@@ -76,7 +77,7 @@
                 :to="{ name: 'sign up' }"
                 class="button is-high-con is-outlined is-rounded hvr-grow"
               >
-                <span>Sign up</span>
+                <span>{{ $t("be.boxsprout.app.nav.sign-up") }}</span>
               </router-link>
 
               <router-link
@@ -86,7 +87,7 @@
                 <span class="icon hvr-icon">
                   <font-awesome-icon icon="sign-in-alt" />
                 </span>
-                <span>Log in</span>
+                <span>{{ $t("be.boxsprout.app.nav.log-in") }}</span>
               </router-link>
             </div>
           </div>
@@ -94,12 +95,12 @@
             <div class="buttons">
               <a
                 @click="user.logout()"
-                class="button is-light is-outlined is-rounded hvr-icon-push hvr-grow active-fill"
+                class="button is-high-con is-outlined is-rounded hvr-icon-push hvr-grow active-fill"
               >
                 <span class="icon hvr-icon">
                   <font-awesome-icon icon="sign-out-alt" />
                 </span>
-                <span>Log out</span>
+                <span>{{ $t("be.boxsprout.app.nav.log-out") }}</span>
               </a>
             </div>
           </div>
@@ -113,7 +114,7 @@
       <div class="content has-text-centered">
         <h3>BoxSprout</h3>
         <p>
-          Created by
+          {{ $t("be.boxsprout.app.footer") }}
           <a
             class="swirly-link"
             href="https://www.linkedin.com/in/eduard-monstrey-16904663/"
@@ -154,6 +155,7 @@
 import User from "@/models/user";
 import { Component, Vue } from "vue-property-decorator";
 import { MetaInfo } from "vue-meta";
+import LocaleChanger from "@/components/LocaleChanger.vue";
 
 export const titleTemplate = (chunk: string) =>
   chunk ? `${chunk} - BoxSprout` : "BoxSprout";
@@ -229,15 +231,18 @@ export const metaWrapper = (
         },
         {
           property: "og:image",
-          content: require("@/assets/Logo.svg"),
+          content: require("@/assets/Logo.png"),
           vmid: "og:image"
         },
         {
           itemprop: "image",
-          content: require("@/assets/Logo.svg")
+          content: require("@/assets/Logo.png")
         }
       ].concat(metaWrapper(title, description, url))
     };
+  },
+  components: {
+    "locale-changer": LocaleChanger
   }
 })
 export default class App extends Vue {

@@ -1,0 +1,153 @@
+{
+  "be": {
+    "boxsprout": {
+      "shared": {
+        "home": "Home",
+        "about": "About",
+        "log-in": "Log in",
+        "sign-up": "Sign up",
+        "products": "Products",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Submit",
+        "for-example": "e.g.",
+        "name": "Name",
+        "phone": "Phone",
+        "address": "Address",
+        "postal-code": "Postal Code",
+        "city": "City",
+        "country": "Country",
+        "confirm-password": "Password Confirmation",
+        "register": "Register",
+        "log-out": "Log out"
+      },
+      "app": {
+        "nav": {
+          "home": "@:be.boxsprout.shared.home",
+          "products": "@:be.boxsprout.shared.products",
+          "about": "@:be.boxsprout.shared.about",
+          "sign-up": "@:be.boxsprout.shared.sign-up",
+          "log-in": "@:be.boxsprout.shared.log-in",
+          "log-out": "@:be.boxsprout.shared.log-out"
+        },
+        "footer": "Created By"
+      },
+      "home": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.home",
+          "description": "Home Page."
+        },
+        "description": "Home page description.",
+        "button": "Find out more"
+      },
+      "about": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.about",
+          "description": "Learn more about the vision of BoxSprout."
+        },
+        "main": "This is an about page."
+      },
+      "login": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.log-in",
+          "description": "Log into your BoxSprout account."
+        },
+        "image": {
+          "alt": ["A picture of a pretty plant."]
+        },
+        "form": {
+          "email": "@:be.boxsprout.shared.email",
+          "password": "@:be.boxsprout.shared.password",
+          "submit": "@:be.boxsprout.shared.submit",
+          "for-example": "@:be.boxsprout.shared.for-example"
+        },
+        "header": "@:be.boxsprout.shared.log-in"
+      },
+      "not-found": {
+        "meta": {
+          "title": "Not Found",
+          "description": "The page you were looking for wasn't found."
+        },
+        "title": ["Oops,", "looks like you're lost."],
+        "button": "Let's go back"
+      },
+      "order": {
+        "form": {
+          "title": "Shipping & Billing Information",
+          "name": "@:be.boxsprout.shared.name",
+          "for-example": "@:be.boxsprout.shared.for-example",
+          "email": "@:be.boxsprout.shared.email",
+          "phone": "@:be.boxsprout.shared.phone",
+          "address": "@:be.boxsprout.shared.address",
+          "city": "@:be.boxsprout.shared.city",
+          "postal-code": "@:be.boxsprout.shared.postal-code",
+          "country": "@:be.boxsprout.shared.country",
+          "button": "Pay €{price} using Bancontact",
+          "countries": {
+            "belgium": "Belgium"
+          }
+        },
+        "toast": {
+          "sign-up": "You need to sign up first.",
+          "log-in": "@:be.boxsprout.shared.log-in"
+        },
+        "title": "Purchase {product}",
+        "subtitle": "Complete your shipping and payment details below"
+      },
+      "order-confirm": {
+        "status": {
+          "consumed": {
+            "title": "Thanks for your order!",
+            "description": "We just sent your receipt to your email address, and your items will be on their way shortly."
+          },
+          "failed": {
+            "title": "Payment Cancelled.",
+            "description": "Your payment was cancelled."
+          },
+          "waiting": {
+            "title": "Processing Payment...",
+            "description": "We are waiting for your payment to be confirmed. The page will automatically refresh."
+          },
+          "error": {
+            "title": "Payment Failed.",
+            "description": "We are waiting for your payment to be confirmed. The page will automatically refresh."
+          }
+        },
+        "title": "Purchase Confirmation",
+        "subtitle": "Please contact us via boxsprout@gmail.com with your payment details."
+      },
+      "products": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.products",
+          "description": "Overview of available BoxSprout products."
+        },
+        "title": "Product Overview"
+      },
+      "sign-up": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.sign-up",
+          "description": "Sign up to BoxSprout."
+        },
+        "image": {
+          "alt": ["A picture of a pretty plant."]
+        },
+        "form": {
+          "email": "@:be.boxsprout.shared.email",
+          "name": "@:be.boxsprout.shared.name",
+          "password": "@:be.boxsprout.shared.password",
+          "confirm-password": "@:be.boxsprout.shared.confirm-password",
+          "register": "@:be.boxsprout.shared.register",
+          "for-example": "@:be.boxsprout.shared.for-example"
+        },
+        "header": "@:be.boxsprout.shared.sign-up"
+      },
+      "model": {
+        "login": {
+          "success-login": "Login success!",
+          "success-register": "Registration success!"
+        },
+        "failed-register": "Failed to register. (Critical)"
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
           <div class="column is-hidden-mobile is-half">
             <img
               src="@/assets/plant-1.png"
-              alt="A picture of a pretty plant."
+              :alt="$t('be.boxsprout.login.image.alt[0]')"
             />
           </div>
 
@@ -14,7 +14,7 @@
             <h3
               class="has-text-light has-text-weight-bold is-size-1 is-size-3-mobile"
             >
-              Log in.
+              {{ $t("be.boxsprout.login.header") }}
             </h3>
 
             <div class="notification is-second" v-if="login_response.failed">
@@ -32,12 +32,17 @@
 
             <form @submit.prevent="login">
               <div class="field">
-                <label class="label is-size-3 is-size-5-mobile">Email</label>
+                <label class="label is-size-3 is-size-5-mobile">{{
+                  $t("be.boxsprout.login.form.email")
+                }}</label>
                 <div class="control has-icons-left">
                   <input
                     v-model="details.email"
                     type="email"
-                    placeholder="e.g. bruce@batcave.io"
+                    :placeholder="
+                      $t('be.boxsprout.login.form.for-example') +
+                        'bruce@batcave.io'
+                    "
                     class="input is-size-4 is-size-5-mobile"
                   />
                   <span class="icon is-left is-size-4 is-size-5-mobile">
@@ -46,12 +51,16 @@
                 </div>
               </div>
               <div class="field">
-                <label class="label is-size-3 is-size-5-mobile">Password</label>
+                <label class="label is-size-3 is-size-5-mobile">{{
+                  $t("be.boxsprout.login.form.password")
+                }}</label>
                 <div class="control has-icons-left">
                   <input
                     v-model="details.password"
                     type="password"
-                    placeholder="e.g. ***********"
+                    :placeholder="
+                      $t('be.boxsprout.login.form.for-example') + '***********'
+                    "
                     class="input is-size-4 is-size-5-mobile"
                   />
                   <span class="icon is-left is-size-4 is-size-5-mobile">
@@ -66,7 +75,7 @@
                     class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
                     v-bind:class="{ 'is-loading': loading }"
                   >
-                    Submit
+                    {{ $t("be.boxsprout.login.form.submit") }}
                   </button>
                 </div>
               </div>
@@ -87,8 +96,10 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
   metaInfo() {
-    const title = "Login";
-    const description = "Log into your BoxSprout account.";
+    const title = this.$t("be.boxsprout.login.meta.title") as string;
+    const description = this.$t(
+      "be.boxsprout.login.meta.description"
+    ) as string;
     const url = "log-in";
 
     return {

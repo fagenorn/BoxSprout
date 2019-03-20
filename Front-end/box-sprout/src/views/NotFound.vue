@@ -7,14 +7,16 @@
             <img class="is-error" src="@/assets/404.svg" />
 
             <div class="error-text">
-              <h1 class="is-size-2 is-size-4-mobile">Oops,</h1>
+              <h1 class="is-size-2 is-size-4-mobile">
+                {{ $t("be.boxsprout.not-found.title[0]") }}
+              </h1>
               <h2 class="is-size-4 is-size-6-mobile">
-                <span>looks like you're lost</span>
+                <span> {{ $t("be.boxsprout.not-found.title[1]") }} </span>
               </h2>
               <a
                 @click="$router.go(-1)"
                 class="button is-primary is-rounded hvr-grow"
-                ><span>Let's go back</span></a
+                ><span> {{ $t("be.boxsprout.not-found.button") }} </span></a
               >
             </div>
           </div>
@@ -30,8 +32,10 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
   metaInfo() {
-    const title = "Not Found";
-    const description = "The page you were looking for wasn't found.";
+    const title = this.$t("be.boxsprout.not-found.meta.title") as string;
+    const description = this.$t(
+      "be.boxsprout.not-found.meta.description"
+    ) as string;
     const url = "404";
 
     return {

@@ -3,7 +3,9 @@
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">Purchase Confirmation</h1>
+          <h1 class="title">
+            {{ $t("be.boxsprout.order-confirmation.title") }}
+          </h1>
         </div>
       </div>
     </section>
@@ -24,8 +26,6 @@
 
 <script lang="ts" scoped>
 import User from "@/models/user";
-import ProductManager from "@/models/product";
-import { ProductResponse } from "@/models/product";
 import { Component, Vue } from "vue-property-decorator";
 import {
   StripeObject,
@@ -33,13 +33,12 @@ import {
   SourceResponse,
   StripeConstructor
 } from "@/models/stripe";
-import router from "@/router";
 
 declare var Stripe: StripeConstructor;
 
 @Component
 export default class Order extends Vue {
-  private stripe = Stripe(process.env.VUE_APP_STRIPE_KEY);
+  private stripe = Stripe(process.env.VUE_APP_STRIPE_KEY as string);
   private readonly MAX_POLL_COUNT = 10;
   private pollCount = 0;
   client_secret = "";
@@ -67,20 +66,30 @@ export default class Order extends Vue {
           const source = result.source;
           if (source.status === "consumed") {
             this.status = {
-              title: "Thanks for your order!",
-              description:
-                "We just sent your receipt to your email address, and your items will be on their way shortly."
+              title: this.$t(
+                "be.boxsprout.order-confirm.status.comsumed.title"
+              ) as string,
+              description: this.$t(
+                "be.boxsprout.order-confirm.status.comsumed.description"
+              ) as string
             };
           } else if (source.status === "failed") {
             this.status = {
-              title: "Payment Cancelled",
-              description: "Your payment was cancelled."
+              title: this.$t(
+                "be.boxsprout.order-confirm.status.failed.title"
+              ) as string,
+              description: this.$t(
+                "be.boxsprout.order-confirm.status.failed.description"
+              ) as string
             };
           } else {
             this.status = {
-              title: "Processing Payment...",
-              description:
-                "We are waiting for your payment to be confirmed. The page will automatically refresh."
+              title: this.$t(
+                "be.boxsprout.order-confirm.status.waiting.title"
+              ) as string,
+              description: this.$t(
+                "be.boxsprout.order-confirm.status.waiting.description"
+              ) as string
             };
             this.pollCount += 1;
 
@@ -88,9 +97,12 @@ export default class Order extends Vue {
               setTimeout(this.pollData, 1000);
             } else {
               this.status = {
-                title: "Payment Failed",
-                description:
-                  "Please contact us via boxsprout@gmail.com with your payment details."
+                title: this.$t(
+                  "be.boxsprout.order-confirm.status.error.title"
+                ) as string,
+                description: this.$t(
+                  "be.boxsprout.order-confirm.status.error.description"
+                ) as string
               };
             }
           }

@@ -6,7 +6,7 @@
           <div class="column is-hidden-mobile is-half">
             <img
               src="@/assets/plant-2.png"
-              alt="A picture of a pretty plant."
+              :alt="$t('be.boxsprout.sign-up.image.alt[0]')"
             />
           </div>
 
@@ -14,7 +14,7 @@
             <h3
               class="has-text-light has-text-weight-bold is-size-1 is-size-3-mobile"
             >
-              Sign up.
+              {{ $t("be.boxsprout.sign-up.header") }}
             </h3>
 
             <div class="notification is-second" v-if="login_response.failed">
@@ -32,12 +32,17 @@
 
             <form @submit.prevent="register">
               <div class="field">
-                <label class="label is-size-5 is-size-6-mobile">Email</label>
+                <label class="label is-size-5 is-size-6-mobile">{{
+                  $t("be.boxsprout.sign-up.form.email")
+                }}</label>
                 <div class="control has-icons-left">
                   <input
                     v-model="details.email"
                     type="email"
-                    placeholder="e.g. bruce@batcave.io"
+                    :placeholder="
+                      $t('be.boxsprout.sign-up.form.for-example') +
+                        ' bruce@batcave.io'
+                    "
                     class="input is-size-6"
                   />
                   <span class="icon is-left is-size-6">
@@ -46,12 +51,16 @@
                 </div>
               </div>
               <div class="field">
-                <label class="label is-size-5 is-size-6-mobile">Name</label>
+                <label class="label is-size-5 is-size-6-mobile">{{
+                  $t("be.boxsprout.sign-up.form.name")
+                }}</label>
                 <div class="control has-icons-left">
                   <input
                     v-model="details.name"
                     type="text"
-                    placeholder="e.g. Brucy"
+                    :placeholder="
+                      $t('be.boxsprout.sign-up.form.for-example') + ' Brucy'
+                    "
                     class="input is-size-6"
                   />
                   <span class="icon is-left is-size-6">
@@ -60,12 +69,17 @@
                 </div>
               </div>
               <div class="field">
-                <label class="label is-size-5 is-size-6-mobile">Password</label>
+                <label class="label is-size-5 is-size-6-mobile">{{
+                  $t("be.boxsprout.sign-up.form.password")
+                }}</label>
                 <div class="control has-icons-left">
                   <input
                     v-model="details.password"
                     type="password"
-                    placeholder="e.g. ***********"
+                    :placeholder="
+                      $t('be.boxsprout.sign-up.form.for-example') +
+                        ' ***********'
+                    "
                     class="input is-size-6"
                   />
                   <span class="icon is-left is-size-6">
@@ -74,14 +88,17 @@
                 </div>
               </div>
               <div class="field">
-                <label class="label is-size-5 is-size-6-mobile"
-                  >Confirm Password</label
-                >
+                <label class="label is-size-5 is-size-6-mobile">{{
+                  $t("be.boxsprout.sign-up.form.confirm-password")
+                }}</label>
                 <div class="control has-icons-left">
                   <input
                     v-model="details.password_confirmation"
                     type="password"
-                    placeholder="e.g. ***********"
+                    :placeholder="
+                      $t('be.boxsprout.sign-up.form.for-example') +
+                        ' ***********'
+                    "
                     class="input is-size-6"
                   />
                   <span class="icon is-left is-size-6">
@@ -96,7 +113,7 @@
                     class="button is-fifth hvr-grow is-size-4 is-size-6-mobile"
                     v-bind:class="{ 'is-loading': loading }"
                   >
-                    Register
+                    {{ $t("be.boxsprout.sign-up.form.register") }}
                   </button>
                 </div>
               </div>
@@ -117,8 +134,10 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
   metaInfo() {
-    const title = "Sign up";
-    const description = "Sign up to BoxSprout.";
+    const title = this.$t("be.boxsprout.sign-up.meta.title") as string;
+    const description = this.$t(
+      "be.boxsprout.sign-up.meta.description"
+    ) as string;
     const url = "sign-up";
 
     return {

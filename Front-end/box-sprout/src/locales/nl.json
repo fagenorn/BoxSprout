@@ -1,0 +1,153 @@
+{
+  "be": {
+    "boxsprout": {
+      "shared": {
+        "home": "Huis",
+        "about": "Wat betreft",
+        "log-in": "Log in",
+        "sign-up": "Inschrijven",
+        "products": "producten",
+        "email": "E-mail",
+        "password": "Wachtwoord",
+        "submit": "voorleggen",
+        "for-example": "bijv.",
+        "name": "Naam",
+        "phone": "Telefoon",
+        "address": "Adres",
+        "postal-code": "Postcode",
+        "city": "stad",
+        "country": "land",
+        "confirm-password": "Wachtwoordbevestiging",
+        "register": "Registreren",
+        "log-out": "Uitloggen"
+      },
+      "app": {
+        "nav": {
+          "home": "@:be.boxsprout.shared.home",
+          "products": "@:be.boxsprout.shared.products",
+          "about": "@:be.boxsprout.shared.about",
+          "sign-up": "@:be.boxsprout.shared.sign-up",
+          "log-in": "@:be.boxsprout.shared.log-in",
+          "log-out": "@:be.boxsprout.shared.log-out"
+        },
+        "footer": "Gemaakt door"
+      },
+      "home": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.home",
+          "description": "Startpagina."
+        },
+        "description": "Beginpagina beschrijving.",
+        "button": "Meer te weten komen"
+      },
+      "about": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.about",
+          "description": "Lees meer over de visie van BoxSprout."
+        },
+        "main": "Dit is een ongeveer pagina."
+      },
+      "login": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.log-in",
+          "description": "Log in op uw BoxSprout-account."
+        },
+        "image": {
+          "alt": ["Een foto van een mooie plant."]
+        },
+        "form": {
+          "email": "@:be.boxsprout.shared.email",
+          "password": "@:be.boxsprout.shared.password",
+          "submit": "@:be.boxsprout.shared.submit",
+          "for-example": "@:be.boxsprout.shared.for-example"
+        },
+        "header": "@:be.boxsprout.shared.log-in"
+      },
+      "not-found": {
+        "meta": {
+          "title": "Niet gevonden",
+          "description": "De pagina waarnaar u op zoek was, is niet gevonden."
+        },
+        "title": ["Oops,", "het lijkt erop dat je verdwaald bent."],
+        "button": "Laten we terug gaan"
+      },
+      "order": {
+        "form": {
+          "title": "Verzend- en factuurinformatie",
+          "name": "@:be.boxsprout.shared.name",
+          "for-example": "@:be.boxsprout.shared.for-example",
+          "email": "@:be.boxsprout.shared.email",
+          "phone": "@:be.boxsprout.shared.phone",
+          "address": "@:be.boxsprout.shared.address",
+          "city": "@:be.boxsprout.shared.city",
+          "postal-code": "@:be.boxsprout.shared.postal-code",
+          "country": "@:be.boxsprout.shared.country",
+          "button": "Betaal €{price} met Bancontact",
+          "countries": {
+            "belgium": "Belgie"
+          }
+        },
+        "toast": {
+          "sign-up": "U moet eerst aanmelden.",
+          "log-in": "@:be.boxsprout.shared.log-in"
+        },
+        "title": "Aankoop {product}",
+        "subtitle": "Vul hieronder uw verzend- en betalingsgegevens in"
+      },
+      "order-confirm": {
+        "status": {
+          "consumed": {
+            "title": "Bedankt voor je bestelling!",
+            "description": "We hebben zojuist uw kwitantie naar uw e-mailadres gestuurd en uw artikelen zijn binnenkort onderweg."
+          },
+          "failed": {
+            "title": "Betaling geannuleerd.",
+            "description": "Uw betaling is geannuleerd."
+          },
+          "waiting": {
+            "title": "Betaling verwerken...",
+            "description": "We wachten tot uw betaling wordt bevestigd. De pagina wordt automatisch vernieuwd."
+          },
+          "error": {
+            "title": "Betaling mislukt.",
+            "description": "We wachten tot uw betaling wordt bevestigd. De pagina wordt automatisch vernieuwd."
+          }
+        },
+        "title": "Aankoop bevestiging",
+        "subtitle": "Neem contact met ons op via boxsprout@gmail.com met uw betalingsgegevens."
+      },
+      "products": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.products",
+          "description": "Overzicht van beschikbare BoxSprout-producten."
+        },
+        "title": "Productoverzicht"
+      },
+      "sign-up": {
+        "meta": {
+          "title": "@:be.boxsprout.shared.sign-up",
+          "description": "Meld je aan voor BoxSprout."
+        },
+        "image": {
+          "alt": ["Een foto van een mooie plant."]
+        },
+        "form": {
+          "email": "@:be.boxsprout.shared.email",
+          "name": "@:be.boxsprout.shared.name",
+          "password": "@:be.boxsprout.shared.password",
+          "confirm-password": "@:be.boxsprout.shared.confirm-password",
+          "register": "@:be.boxsprout.shared.register",
+          "for-example": "@:be.boxsprout.shared.for-example"
+        },
+        "header": "@:be.boxsprout.shared.sign-up"
+      },
+      "model": {
+        "login": {
+          "success-login": "Succesvol ingelogd!",
+          "success-register": "Registratie succes!"
+        },
+        "failed-register": "Aanmelden mislukt. (Kritiek)"
+      }
+    }
+  }
+}

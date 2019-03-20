@@ -1,5 +1,5 @@
 <template>
-  <div class="home is-centered">
+  <div class="home">
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container has-text-right">
@@ -16,15 +16,13 @@
               <h2
                 class="is-size-4 is-size-6-mobile has-text-light has-font-weight-bold"
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Facilis laborum provident debitis eum consequatur at
-                voluptatibus aliquid, ut libero. Aut.
+                {{ $t("be.boxsprout.home.description") }}
               </h2>
               <div class="links">
                 <a
                   class="is-size-4 is-size-6-mobile button is-fifth is-large hvr-grow"
                 >
-                  Find out more
+                  {{ $t("be.boxsprout.home.button") }}
                 </a>
               </div>
             </div>
@@ -74,8 +72,8 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
   metaInfo() {
-    const title = "Home";
-    const description = "Home page";
+    const title = this.$t("be.boxsprout.home.meta.title") as string;
+    const description = this.$t("be.boxsprout.home.meta.description") as string;
     const url = "home";
 
     return {

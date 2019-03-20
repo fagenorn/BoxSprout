@@ -31,7 +31,6 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { ProductResponse } from "@/models/product";
 import { Route } from "vue-router";
-import router from "@/router";
 
 @Component
 export default class Product extends Vue {
