@@ -19,7 +19,7 @@
           <router-link
             class="button is-primary hvr-grow is-size-5-mobile"
             :to="{ name: 'order', query: { id: details.id } }"
-            >Purchase</router-link
+            >{{ $t("be.boxsprout.products.purchase") }}</router-link
           >
         </div>
       </div>

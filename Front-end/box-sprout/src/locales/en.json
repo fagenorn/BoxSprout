@@ -121,7 +121,8 @@
           "title": "@:be.boxsprout.shared.products",
           "description": "Overview of available BoxSprout products."
         },
-        "title": "Product Overview"
+        "title": "Product Overview",
+        "purchase": "Purchase"
       },
       "sign-up": {
         "meta": {

@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import Product from "@/components/Product.vue";
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import ProductManager from "@/models/product";
 import { metaWrapper, titleTemplate } from "@/App.vue";
 
@@ -43,15 +43,29 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 export default class Products extends Vue {
   isLoading = true;
 
+  kids = [] as HTMLElement[];
+
   $refs!: {
     container: HTMLFormElement;
   };
 
   mounted() {
+    this.refreshProducts();
+  }
+
+  refreshProducts() {
+    this.isLoading = true;
+
+    this.kids.forEach(element => {
+      this.$refs.container.removeChild(element);
+    });
+
+    this.kids = [];
+
     let subContainer = {} as HTMLDivElement;
     ProductManager.getProducts().then(products => {
       products.forEach((product, index) => {
-        let instance = new Product({ router: this.$router });
+        let instance = new Product({ router: this.$router, i18n: this.$i18n });
         instance.details = product;
         instance.$mount();
 
@@ -59,14 +73,19 @@ export default class Products extends Vue {
           subContainer = document.createElement("div");
           subContainer.setAttribute("class", "tile is-ancestor");
           this.$refs.container.appendChild(subContainer);
+          this.kids.push(subContainer);
         }
 
-        // instance.$el.className += " tile";
         subContainer.appendChild(instance.$el);
       });
 
       this.isLoading = false;
     });
+  }
+
+  @Watch("$i18n.locale")
+  onLocaleChanged(val: string, oldVal: string) {
+    this.refreshProducts();
   }
 }
 </script>

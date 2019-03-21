@@ -17,14 +17,17 @@ class ProductsTableSeeder extends Seeder
 
         $faker = \Faker\Factory::create();
 
-        // And now, let's create a few products in our database:
         for ($i = 0; $i < 8; $i++) {
-            Product::create([
+            $product = Product::create([
                 'price' => $faker->randomNumber(4),
-                'title' => $faker->sentence,
                 'image' => 'default.jpg',
-                'description' => $faker->paragraph,
             ]);
+
+            $product->fill([
+                'en'  => ['title' => 'Basil', 'description' => 'A basil plant is great for some pasta.'],
+                'nl'  => ['title' => 'Basilicum', 'description' => 'Basilucum is perfect voor pasta te maken.'],
+                'fr'  => ['title' => 'Pasta!!', 'description' => 'Tres Bon. Oui Oeui'],
+            ])->save();
         }
     }
 }

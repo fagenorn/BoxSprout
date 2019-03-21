@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            {{ $t("be.boxsprout.order-confirmation.title") }}
+            {{ $t("be.boxsprout.order-confirm.title") }}
           </h1>
         </div>
       </div>

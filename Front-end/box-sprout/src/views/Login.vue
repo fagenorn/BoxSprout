@@ -41,7 +41,7 @@
                     type="email"
                     :placeholder="
                       $t('be.boxsprout.login.form.for-example') +
-                        'bruce@batcave.io'
+                        ' bruce@batcave.io'
                     "
                     class="input is-size-4 is-size-5-mobile"
                   />
@@ -59,7 +59,7 @@
                     v-model="details.password"
                     type="password"
                     :placeholder="
-                      $t('be.boxsprout.login.form.for-example') + '***********'
+                      $t('be.boxsprout.login.form.for-example') + ' ***********'
                     "
                     class="input is-size-4 is-size-5-mobile"
                   />
