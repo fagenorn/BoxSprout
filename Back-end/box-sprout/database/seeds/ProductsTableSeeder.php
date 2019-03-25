@@ -5,6 +5,8 @@ use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
 {
+    private $locales = ['en', 'nl', 'fr'];
+
     /**
      * Run the database seeds.
      *
@@ -12,22 +14,61 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        // Let's truncate our existing records to start from scratch.
-        Product::truncate();
+        $product = Product::firstOrNew([
+            'price' => 995,
+            'image' => 'basil.jpg',
+        ]);
 
-        $faker = \Faker\Factory::create();
+        $product->fill($this->productDetails('basil'))->save();
 
-        for ($i = 0; $i < 8; $i++) {
-            $product = Product::create([
-                'price' => $faker->randomNumber(4),
-                'image' => 'default.jpg',
-            ]);
+        // ######
 
-            $product->fill([
-                'en'  => ['title' => 'Basil', 'description' => 'A basil plant is great for some pasta.'],
-                'nl'  => ['title' => 'Basilicum', 'description' => 'Basilucum is perfect voor pasta te maken.'],
-                'fr'  => ['title' => 'Pasta!!', 'description' => 'Tres Bon. Oui Oeui'],
-            ])->save();
+        $product = Product::firstOrNew([
+            'price' => 995,
+            'image' => 'mint.jpg',
+        ]);
+
+        $product->fill($this->productDetails('mint'))->save();
+
+        // ######
+
+        $product = Product::firstOrNew([
+            'price' => 995,
+            'image' => 'cress.jpg',
+        ]);
+
+        $product->fill($this->productDetails('cress'))->save();
+
+        // ######
+
+        $product = Product::firstOrNew([
+            'price' => 995,
+            'image' => 'cherry-tomato.jpg',
+        ]);
+
+        $product->fill($this->productDetails('cherry-tomato'))->save();
+    }
+
+    private function productDetails($product)
+    {
+        $fill = [];
+        foreach ($this->locales as $locale) {
+            $fill[$locale] =  [
+                'title' => $this->productTitle($product, $locale),
+                'description' => $this->productDescription($product, $locale)
+            ];
         }
+
+        return $fill;
+    }
+
+    private function productTitle($product, $locale)
+    {
+        return __("products." . $product . ".title", [], $locale);
+    }
+
+    private function productDescription($product, $locale)
+    {
+        return __("products." . $product . ".description", [], $locale);
     }
 }
