@@ -54,12 +54,12 @@ class AuthController extends Controller
                 return response($response, 200);
             } else {
                 // Incorrect password
-                $response = [ 'error' => 'Incorrect email and/or password' ];
+                $response = [ 'error' => __('auth.failed') ];
                 return response($response, 422);
             }
         } else {
             // User doesn't exist
-            $response = [ 'error' => 'Incorrect email and/or password' ];
+            $response = [ 'error' => __('auth.failed') ];
             return response()->json($response, 422);
         }
 
@@ -70,7 +70,7 @@ class AuthController extends Controller
         $token = $request->user()->token();
         $token->revoke();
 
-        $response = [ 'error' => 'You have been succesfully logged out!' ];
+        $response = [ 'error' => __('auth.logged-out') ];
         return response()->json($response, 200);
 
     }

@@ -8,7 +8,7 @@ class Product extends Model
 {
     use \Dimsav\Translatable\Translatable;
 
-    public $translatedAttributes = ['title', 'description',];
+    public $translatedAttributes = ['title', 'description', ];
 
     /**
      * The attributes that are mass assignable.
