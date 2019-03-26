@@ -2,7 +2,10 @@
   <div class="locale-changer">
     <div class="control has-icons-left">
       <div class="select is-primary is-rounded">
-        <select v-model="$i18n.locale">
+        <select
+          :aria-label="$t('be.boxsprout.component.language')"
+          v-model="$i18n.locale"
+        >
           <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{
             lang
           }}</option>

@@ -21,6 +21,9 @@
         "register": "Register",
         "log-out": "Log out"
       },
+      "component": {
+        "language": "Language"
+      },
       "app": {
         "nav": {
           "home": "@:be.boxsprout.shared.home",

@@ -67,10 +67,10 @@ export default class Order extends Vue {
           if (source.status === "consumed") {
             this.status = {
               title: this.$t(
-                "be.boxsprout.order-confirm.status.comsumed.title"
+                "be.boxsprout.order-confirm.status.consumed.title"
               ) as string,
               description: this.$t(
-                "be.boxsprout.order-confirm.status.comsumed.description"
+                "be.boxsprout.order-confirm.status.consumed.description"
               ) as string
             };
           } else if (source.status === "failed") {
