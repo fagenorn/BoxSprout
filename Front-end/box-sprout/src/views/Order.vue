@@ -209,7 +209,7 @@ export default class Order extends Vue {
       return_url: ""
     },
     bancontact: {
-      preferred_language: this.$i18n.locale
+      preferred_language: "en"
     },
     metadata: {
       user: 0,
@@ -286,6 +286,7 @@ export default class Order extends Vue {
 
     this.payment_info.owner.name = User.userDetails.name;
     this.payment_info.owner.email = User.userDetails.email;
+    this.payment_info.bancontact.preferred_language = this.$i18n.locale as any;
 
     const id = parseInt(this.$route.query.id as string);
 
