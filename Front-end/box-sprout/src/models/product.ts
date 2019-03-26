@@ -1,5 +1,4 @@
 import Vue from "vue";
-import i18n from "@/i18n";
 import { AxiosRequestConfig } from "axios";
 
 export interface ProductResponse {
@@ -13,22 +12,14 @@ export interface ProductResponse {
 class ProductManager {
   products = [] as ProductResponse[];
 
-  private config(): AxiosRequestConfig {
-    return {
-      headers: {
-        "Content-Language": i18n.locale
-      }
-    };
-  }
-
   public async getProducts(): Promise<ProductResponse[]> {
-    let response = await Vue.axios.get("/products", this.config());
+    let response = await Vue.axios.get("/products");
     this.products = response.data.data;
     return this.products;
   }
 
   public async getProduct(id: Number): Promise<ProductResponse> {
-    let response = await Vue.axios.get("/products/" + id, this.config());
+    let response = await Vue.axios.get("/products/" + id);
     return response.data.data as ProductResponse;
   }
 }

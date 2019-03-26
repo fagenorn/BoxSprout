@@ -37,6 +37,13 @@
           "title": "@:be.boxsprout.shared.home",
           "description": "Home Page."
         },
+        "image": {
+          "alt": [
+            "Simple plant on a window sill.",
+            "Toats garnished with various herbs and spices.",
+            "Garden cress on a window sill."
+          ]
+        },
         "description": "Home page description.",
         "button": "Find out more"
       },

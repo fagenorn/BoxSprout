@@ -209,7 +209,7 @@ export default class Order extends Vue {
       return_url: ""
     },
     bancontact: {
-      preferred_language: "nl"
+      preferred_language: this.$i18n.locale
     },
     metadata: {
       user: 0,

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6f97881dec8bc70700ebcabdb9cb9ff",
+    "content-hash": "fd5ee6d8d4f0409c4a5b1f2f9a5cf140",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -2817,69 +2817,6 @@
                 "stylesheet"
             ],
             "time": "2016-07-19T19:14:21+00:00"
-        },
-        {
-            "name": "sebudesign/laravel-poeditor",
-            "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SeBuDesign/Laravel-POEditor.git",
-                "reference": "f3407f73339e88fb625329ca12ac1b108b89fcae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SeBuDesign/Laravel-POEditor/zipball/f3407f73339e88fb625329ca12ac1b108b89fcae",
-                "reference": "f3407f73339e88fb625329ca12ac1b108b89fcae",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.3",
-                "illuminate/container": "~5.3.0|~5.4.0|~5.5.0|~5.6.0|~5.7.0",
-                "illuminate/contracts": "~5.3.0|~5.4.0|~5.5.0|~5.6.0|~5.7.0",
-                "illuminate/database": "~5.4.0|~5.5.0|~5.6.0|~5.7.0",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.1",
-                "orchestra/testbench": "~3.3.0|~3.4.2|^3.5.0",
-                "phpunit/phpunit": "^5.7|6.2|^7.0",
-                "vlucas/phpdotenv": "^2.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "SeBuDesign\\PoEditor\\PoEditorServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SeBuDesign\\PoEditor\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sven Buijsrogge",
-                    "email": "sven@sebudesign.nl",
-                    "homepage": "https://sebu.design",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A Laravel package for POEditor",
-            "homepage": "https://github.com/SeBuDesign/Laravel-POEditor",
-            "keywords": [
-                "Poeditor",
-                "i18n",
-                "laravel",
-                "sebudesign",
-                "translations"
-            ],
-            "time": "2018-12-10T10:18:32+00:00"
         },
         {
             "name": "spatie/laravel-cors",

@@ -31,36 +31,22 @@
       </div>
     </section>
 
-    <div class="container is-fluid">
-      <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
-          <div class="tile is-child box">
-            <figure class="image is-16by9">
-              <img
-                src="https://via.placeholder.com/512x288"
-                alt="placeholder"
-              />
-            </figure>
-          </div>
-          <div class="tile is-child box">
-            <figure class="image is-16by9">
-              <img
-                src="https://via.placeholder.com/512x288"
-                alt="placeholder"
-              />
-            </figure>
-          </div>
-        </div>
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <figure class="image is-5by3">
-              <img
-                src="https://via.placeholder.com/1000x600"
-                alt="placeholder"
-              />
-            </figure>
-          </div>
-        </div>
+    <div class="container is-fluid images">
+      <div class="image-col">
+        <img
+          src="@/assets/plant-3.jpg"
+          :alt="$t('be.boxsprout.home.image.alt[0]')"
+        />
+        <img
+          src="@/assets/plant-5.jpg"
+          :alt="$t('be.boxsprout.home.image.alt[2]')"
+        />
+      </div>
+      <div class="image-col">
+        <img
+          src="@/assets/plant-4.jpg"
+          :alt="$t('be.boxsprout.home.image.alt[1]')"
+        />
       </div>
     </div>
   </div>
@@ -97,6 +83,43 @@ export default class Home extends Vue {}
       }
       h1 {
         font-family: "Fredoka One", "Open Sans", Helvetica, Arial, sans-serif;
+      }
+    }
+  }
+
+  .images {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .image-col {
+      flex: 35%;
+      max-width: 35%;
+
+      &:last-child {
+        flex: 65%;
+        max-width: 65%;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .image-col {
+        flex: 100%;
+        max-width: 100%;
+
+        img {
+          margin-bottom: 5px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          flex: inherit;
+          max-width: inherit;
+        }
       }
     }
   }

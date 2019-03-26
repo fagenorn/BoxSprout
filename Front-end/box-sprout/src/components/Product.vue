@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-image">
         <div class="price-tag is-rounded is-primary">
-          <span>{{ price }}</span>
+          <span>{{ price.toFixed(2).replace(".", ",") }}</span>
         </div>
         <figure class="image is-4by3">
           <img :src="details.image" :alt="details.title" />
@@ -88,6 +88,9 @@ export default class Product extends Vue {
   .content {
     margin-bottom: 3.5em;
     text-align: left;
+    p {
+      text-align: justify;
+    }
   }
 
   .product-footer {

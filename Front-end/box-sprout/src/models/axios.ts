@@ -1,4 +1,5 @@
 import axios from "axios";
+import i18n from "@/i18n";
 
 const fetchClient = () => {
   const defaultOptions = {
@@ -16,6 +17,7 @@ const fetchClient = () => {
   instance.interceptors.request.use(function(config) {
     const token = localStorage.getItem("token");
     token ? (config.headers.Authorization = `Bearer ${token}`) : null;
+    config.headers["Content-Language"] = i18n.locale;
     return config;
   });
 
