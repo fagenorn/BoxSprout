@@ -54,7 +54,35 @@
         "meta": {
           "title": "@:be.boxsprout.shared.about",
           "description": "Learn more about the vision of BoxSprout and who we are."
-        }
+        },
+        "anis": {
+          "title": "Meet Anis",
+          "image": "Anis Sakkaf",
+          "description": "Anis Sakkaf lives in Boortmeerbeek. He is a great developer and a very charismatic person. He founded BoxSprout in February 2019 (together with 3 other team members) as a way of sharing the experience of growing and nurturing plants."
+        },
+        "team": {
+          "martijn": {
+            "name": "Martijn Gilis",
+            "function": "Finance",
+            "image": "@:be.boxsprout.about.team.martijn.name",
+            "description": "Martijn is an alright guy who is hard to describe in a few paragraphs. He is generally the go-to guy if there are any issues (since generally he is the one who caused them). During work hours you will always find him eating behind is desk, no matter the time of day since he is a very hungry young man."
+          },
+          "philippe": {
+            "name": "Philippe Gilops",
+            "function": "Accounting",
+            "image": "@:be.boxsprout.about.team.philippe.name",
+            "description": "As a student tax accountancy, Philippe ensures accurate accounting of our company. In addition to his punctuality, positivity and motivation are also a few words that describe him accurately."
+          },
+          "eduard": {
+            "name": "Eduard Monstrey",
+            "function": "Marketing",
+            "image": "@:be.boxsprout.about.team.eduard.name",
+            "description": "Eduard is the marketing boy of BoxSprout. He is always hardworking looking for new marketing opportunities and making new contacts. People like to describe him as a opportunist who is always on time and never misses a deadline."
+          },
+          "title": "Meet the team"
+        },
+        "title": "@:be.boxsprout.shared.about",
+        "contact": "Contact Us"
       },
       "login": {
         "meta": {

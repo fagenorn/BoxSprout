@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            About
+            {{ $t("be.boxsprout.about.title") }}
           </h1>
         </div>
       </div>
@@ -12,18 +12,18 @@
     <div class="main container is-fluid">
       <div class="anis">
         <div class="image-box">
-          <img src="@/assets/anis.jpg" alt="Anis Sakkaf" />
+          <img
+            src="@/assets/anis.jpg"
+            :alt="$t('be.boxsprout.about.anis.image')"
+          />
         </div>
         <div class="content">
           <div class="title-box">
-            <h2>Meet Anis</h2>
+            <h2>{{ $t("be.boxsprout.about.anis.title") }}</h2>
           </div>
           <div class="description-box">
             <p>
-              Anis Sakkaf lives in Boortmeerbeek. He is a great developer and a
-              very charismatic person. He founded BoxSprout in February 2019
-              (together with 3 other team members) as a way of sharing the
-              experience of growing and nurturing plants.
+              {{ $t("be.boxsprout.about.anis.description") }}
             </p>
             <div class="icon-seperator"></div>
             <div class="social">
@@ -54,33 +54,27 @@
       </div>
       <div class="team">
         <div class="title-box sperator-box">
-          <h2>Meet the team</h2>
+          <h2>{{ $t("be.boxsprout.about.team.title") }}</h2>
         </div>
         <div class="members">
           <div class="team-member">
             <img
               class="is-rounded"
               src="@/assets/martijn.jpg"
-              alt="Martino Gilis"
+              :alt="$t('be.boxsprout.about.team.martijn.image')"
             />
             <div class="icon-seperator">
               <font-awesome-icon icon="star" />
             </div>
             <div class="name">
-              <h2>Martijn Gilis</h2>
-              <h3>Finance</h3>
+              <h2>{{ $t("be.boxsprout.about.team.martijn.name") }}</h2>
+              <h3>{{ $t("be.boxsprout.about.team.martijn.function") }}</h3>
             </div>
             <div class="icon-seperator">
               <font-awesome-icon icon="star" />
             </div>
             <div class="description">
-              <p>
-                Martijn is an alright guy who is hard to describe in a few
-                paragraphs. He is generally the go-to guy if there are any
-                issues (since generally he is the one who caused them). During
-                work hours you will always find him eating behind is desk, no
-                matter the time of day since he is a very hungry young man.
-              </p>
+              <p>{{ $t("be.boxsprout.about.team.martijn.description") }}</p>
             </div>
             <div class="icon-seperator"></div>
             <div class="social">
@@ -111,24 +105,21 @@
             <img
               class="is-rounded"
               src="@/assets/philippe.png"
-              alt="Philippe Gilops"
+              :alt="$t('be.boxsprout.about.team.philippe.image')"
             />
             <div class="icon-seperator">
               <font-awesome-icon icon="star" />
             </div>
             <div class="name">
-              <h2>Philippe Gilops</h2>
-              <h3>Accounting</h3>
+              <h2>{{ $t("be.boxsprout.about.team.philippe.name") }}</h2>
+              <h3>{{ $t("be.boxsprout.about.team.philippe.function") }}</h3>
             </div>
             <div class="icon-seperator">
               <font-awesome-icon icon="star" />
             </div>
             <div class="description">
               <p>
-                As a student tax accountancy, Philippe ensures accurate
-                accounting of our company. In addition to his punctuality,
-                positivity and motivation are also a few words that describe him
-                accurately.
+                {{ $t("be.boxsprout.about.team.philippe.description") }}
               </p>
             </div>
             <div class="icon-seperator"></div>
@@ -160,24 +151,21 @@
             <img
               class="is-rounded"
               src="@/assets/eduard.jpg"
-              alt="Eduard Monstrey"
+              :alt="$t('be.boxsprout.about.team.eduard.image')"
             />
             <div class="icon-seperator">
               <font-awesome-icon icon="star" />
             </div>
             <div class="name">
-              <h2>Eduard Monstrey</h2>
-              <h3>Marketing</h3>
+              <h2>{{ $t("be.boxsprout.about.team.eduard.name") }}</h2>
+              <h3>{{ $t("be.boxsprout.about.team.eduard.function") }}</h3>
             </div>
             <div class="icon-seperator">
               <font-awesome-icon icon="star" />
             </div>
             <div class="description">
               <p>
-                Eduard is the marketing boy of BoxSprout. He is always
-                hardworking looking for new marketing opportunities and making
-                new contacts. People like to describe him as a opportunist who
-                is always on time and never misses a deadline.
+                {{ $t("be.boxsprout.about.team.eduard.description") }}
               </p>
             </div>
             <div class="icon-seperator"></div>
@@ -209,7 +197,7 @@
       </div>
       <div class="contact">
         <div class="title-box sperator-box">
-          <h2>Contact Us</h2>
+          <h2>{{ $t("be.boxsprout.about.contact") }}</h2>
         </div>
         <div class="social">
           <a
@@ -303,7 +291,7 @@
 
   .members {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 

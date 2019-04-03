@@ -37,15 +37,49 @@
                     "title": "@:be.boxsprout.shared.home",
                     "description": "Startpagina."
                 },
-                "description": "Beginpagina beschrijving.",
-                "button": "Kom meer te weten"
+                "description": "Een alles-in-één, milieuvriendelijk bouwpakket waarmee u uw eigen minituin kunt beginnen. Perfect als een geschenk voor een geliefde om hen kennis te laten maken met de wereld van het tuinieren.",
+                "button": "Kom meer te weten",
+                "image": {
+                    "alt": [
+                        "Eenvoudige plant op een vensterbank.",
+                        "Toats gegarneerd met verschillende kruiden en specerijen.",
+                        "Tuinkers op een vensterbank."
+                    ]
+                }
             },
             "about": {
                 "meta": {
                     "title": "@:be.boxsprout.shared.about",
                     "description": "Lees meer over de visie van BoxSprout."
                 },
-                "main": "Anis is een sukkel."
+                "anis": {
+                    "title": "Ontmoet Anis",
+                    "image": "Anis Sakkaf",
+                    "description": "Anis Sakkaf woont in Boortmeerbeek. Hij is een geweldige ontwikkelaar en een zeer charismatische persoon. Hij richtte BoxSprout op in februari 2019 (samen met 3 andere teamleden) om de ervaring van het kweken en verzorgen van planten te delen met anderen."
+                },
+                "team": {
+                    "martijn": {
+                        "name": "Martijn Gilis",
+                        "function": "Financien",
+                        "image": "@:be.boxsprout.about.team.martijn.name",
+                        "description": ""
+                    },
+                    "philippe": {
+                        "name": "Philippe Gilops",
+                        "function": "Boekhouding",
+                        "image": "@:be.boxsprout.about.team.philippe.name",
+                        "description": "Philippe zorgt als student accountancy-fiscaliteit voor een nauwkeurige boekhouding van onze onderneming. Naast zijn stiptheid zijn ook positiviteit en motivatie enkele termen die hem op het lijf zijn geschreven."
+                    },
+                    "eduard": {
+                        "name": "Eduard Monstrey",
+                        "function": "Marketing",
+                        "image": "@:be.boxsprout.about.team.eduard.name",
+                        "description": ""
+                    },
+                    "title": "Ontmoet de team"
+                },
+                "title": "@:be.boxsprout.shared.about",
+                "contact": "Contacteer Ons"
             },
             "login": {
                 "meta": {
@@ -155,6 +189,9 @@
                     "success-register": "Registratie gelukt!"
                 },
                 "failed-register": "Registreren mislukt."
+            },
+            "component": {
+                "language": "Taal"
             }
         }
     }
