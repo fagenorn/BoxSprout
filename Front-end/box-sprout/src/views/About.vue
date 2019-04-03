@@ -12,10 +12,7 @@
     <div class="main container is-fluid">
       <div class="anis">
         <div class="image-box">
-          <img
-            src="@/assets/anis.jpg"
-            alt="Anis Sakkaf"
-          />
+          <img src="@/assets/anis.jpg" alt="Anis Sakkaf" />
         </div>
         <div class="content">
           <div class="title-box">
@@ -35,28 +32,22 @@
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'linkedin']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'linkedin']"
+              /></a>
               <a
                 href="https://www.facebook.com/DuckDonaldD"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'facebook']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'facebook']"
+              /></a>
               <a
                 href="https://www.instagram.com/goofball_9/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'instagram']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'instagram']"
+              /></a>
             </div>
           </div>
         </div>
@@ -98,28 +89,22 @@
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'linkedin']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'linkedin']"
+              /></a>
               <a
                 href="https://www.facebook.com/martijn.gilis"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'facebook']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'facebook']"
+              /></a>
               <a
                 href="https://www.instagram.com/martijngilis/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'instagram']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'instagram']"
+              /></a>
             </div>
           </div>
           <div class="team-member">
@@ -153,28 +138,22 @@
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'linkedin']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'linkedin']"
+              /></a>
               <a
                 href="https://www.facebook.com/philippe.gilops"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'facebook']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'facebook']"
+              /></a>
               <a
                 href="https://www.instagram.com/phille_gi/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'instagram']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'instagram']"
+              /></a>
             </div>
           </div>
           <div class="team-member">
@@ -208,28 +187,22 @@
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'linkedin']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'linkedin']"
+              /></a>
               <a
                 href="https://www.facebook.com/edouard.monstrey"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'facebook']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'facebook']"
+              /></a>
               <a
                 href="https://www.instagram.com/eduard_monstrey/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                <font-awesome-icon
-                  size="2x"
-                  :icon="['fab', 'instagram']"
-                /></a>
+                <font-awesome-icon size="2x" :icon="['fab', 'instagram']"
+              /></a>
             </div>
           </div>
         </div>
@@ -244,28 +217,22 @@
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <font-awesome-icon
-              size="3x"
-              icon="envelope"
-            /></a>
+            <font-awesome-icon size="3x" icon="envelope"
+          /></a>
           <a
             href="https://www.facebook.com/BoxSprout/"
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <font-awesome-icon
-              size="3x"
-              :icon="['fab', 'facebook']"
-            /></a>
+            <font-awesome-icon size="3x" :icon="['fab', 'facebook']"
+          /></a>
           <a
             href="https://www.instagram.com/boxsprout/"
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <font-awesome-icon
-              size="3x"
-              :icon="['fab', 'instagram']"
-            /></a>
+            <font-awesome-icon size="3x" :icon="['fab', 'instagram']"
+          /></a>
         </div>
       </div>
     </div>
@@ -284,6 +251,11 @@
   justify-content: center;
   align-items: flex-start;
 
+  @media screen and (max-width: 1180px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .image-box {
     display: inline-block;
     border: 10px solid $a;
@@ -293,6 +265,11 @@
       display: block;
       width: 300px;
       height: 378px;
+
+      @media screen and (max-width: 780px) {
+        width: 200px;
+        height: 252px;
+      }
     }
   }
 
@@ -302,6 +279,10 @@
     left: 50%;
     background: $white;
     width: 100%;
+
+    @media screen and (max-width: 1180px) {
+      left: 0;
+    }
   }
 
   .content {
@@ -309,6 +290,11 @@
     position: relative;
     left: -50px;
     background: $white;
+
+    @media screen and (max-width: 1180px) {
+      margin: 45px 30px 0 30px;
+      left: auto;
+    }
   }
 }
 
@@ -338,6 +324,11 @@
       box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
       height: 256px;
       width: 256px;
+
+      @media screen and (max-width: 780px) {
+        width: 200px;
+        height: 200px;
+      }
     }
 
     .name {
@@ -440,6 +431,10 @@
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
+
+    @media screen and (max-width: 780px) {
+      font-size: 24px;
+    }
   }
 
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);
