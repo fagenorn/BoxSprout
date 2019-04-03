@@ -17,6 +17,8 @@ const SignUp = () =>
   import(/* webpackChunkName: "log in" */ "./views/SignUp.vue");
 const NotFound = () =>
   import(/* webpackChunkName: "log in" */ "./views/NotFound.vue");
+  const Guide = () =>
+  import(/* webpackChunkName: "products" */ "./views/Guide.vue");
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -62,6 +64,11 @@ export default new Router({
       path: "/sign-up",
       name: "sign up",
       component: SignUp
+    },
+    {
+      path: "/guide",
+      name: "guide",
+      component: Guide
     },
     {
       path: "/404",

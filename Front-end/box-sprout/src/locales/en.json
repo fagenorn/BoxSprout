@@ -1,191 +1,191 @@
-{
-  "be": {
-    "boxsprout": {
-      "shared": {
-        "home": "Home",
-        "about": "About",
-        "log-in": "Log in",
-        "sign-up": "Sign up",
-        "products": "Products",
-        "email": "Email",
-        "password": "Password",
-        "submit": "Submit",
-        "for-example": "e.g.",
-        "name": "Name",
-        "phone": "Phone",
-        "address": "Address",
-        "postal-code": "Postal Code",
-        "city": "City",
-        "country": "Country",
-        "confirm-password": "Password Confirmation",
-        "register": "Register",
-        "log-out": "Log out"
-      },
-      "component": {
-        "language": "Language"
-      },
-      "app": {
-        "nav": {
-          "home": "@:be.boxsprout.shared.home",
-          "products": "@:be.boxsprout.shared.products",
-          "about": "@:be.boxsprout.shared.about",
-          "sign-up": "@:be.boxsprout.shared.sign-up",
-          "log-in": "@:be.boxsprout.shared.log-in",
-          "log-out": "@:be.boxsprout.shared.log-out"
+  {
+    "be": {
+      "boxsprout": {
+        "shared": {
+          "home": "Home",
+          "about": "About",
+          "log-in": "Log in",
+          "sign-up": "Sign up",
+          "products": "Products",
+          "email": "Email",
+          "password": "Password",
+          "submit": "Submit",
+          "for-example": "e.g.",
+          "name": "Name",
+          "phone": "Phone",
+          "address": "Address",
+          "postal-code": "Postal Code",
+          "city": "City",
+          "country": "Country",
+          "confirm-password": "Password Confirmation",
+          "register": "Register",
+          "log-out": "Log out"
         },
-        "footer": "Created By"
-      },
-      "home": {
-        "meta": {
-          "title": "@:be.boxsprout.shared.home",
-          "description": "Home Page."
+        "component": {
+          "language": "Language"
         },
-        "image": {
-          "alt": [
-            "Simple plant on a window sill.",
-            "Toats garnished with various herbs and spices.",
-            "Garden cress on a window sill."
-          ]
+        "app": {
+          "nav": {
+            "home": "@:be.boxsprout.shared.home",
+            "products": "@:be.boxsprout.shared.products",
+            "about": "@:be.boxsprout.shared.about",
+            "sign-up": "@:be.boxsprout.shared.sign-up",
+            "log-in": "@:be.boxsprout.shared.log-in",
+            "log-out": "@:be.boxsprout.shared.log-out"
+          },
+          "footer": "Created By"
         },
-        "description": "An all-in-one, eco-friendly building package to start your own mini-garden. Perfect as a gift for a loved one to introduce them to the world of gardening.",
-        "button": "Find out more"
-      },
-      "about": {
-        "meta": {
+        "home": {
+          "meta": {
+            "title": "@:be.boxsprout.shared.home",
+            "description": "Home Page."
+          },
+          "image": {
+            "alt": [
+              "Simple plant on a window sill.",
+              "Toats garnished with various herbs and spices.",
+              "Garden cress on a window sill."
+            ]
+          },
+          "description": "An all-in-one, eco-friendly building package to start your own mini-garden. Perfect as a gift for a loved one to introduce them to the world of gardening.",
+          "button": "Find out more"
+        },
+        "about": {
+          "meta": {
+            "title": "@:be.boxsprout.shared.about",
+            "description": "Learn more about the vision of BoxSprout and who we are."
+          },
+          "anis": {
+            "title": "Meet Anis",
+            "image": "Anis Sakkaf",
+            "description": "Anis Sakkaf lives in Boortmeerbeek. He is a great developer and a very charismatic person. He founded BoxSprout in February 2019 (together with 3 other team members) as a way of sharing the experience of growing and nurturing plants."
+          },
+          "team": {
+            "martijn": {
+              "name": "Martijn Gilis",
+              "function": "Finance",
+              "image": "@:be.boxsprout.about.team.martijn.name",
+              "description": "Martijn, a finance and insurance student, is somewhat the “jack-of-all-trades”. With the help of his creative mind, we designed our sales booth. On top of all, he is our social media guy, when you’re having contact with us, than this is the man you’re talking to!"
+            },
+            "philippe": {
+              "name": "Philippe Gilops",
+              "function": "Accounting",
+              "image": "@:be.boxsprout.about.team.philippe.name",
+              "description": "As a student tax accountancy, Philippe ensures accurate accounting of our company. In addition to his punctuality, positivity and motivation are also a few words that describe him accurately."
+            },
+            "eduard": {
+              "name": "Eduard Monstrey",
+              "function": "Marketing",
+              "image": "@:be.boxsprout.about.team.eduard.name",
+              "description": "Eduard is the marketing boy of BoxSprout. He is always hardworking looking for new marketing opportunities and making new contacts. People like to describe him as a opportunist who is always on time and never misses a deadline."
+            },
+            "title": "Meet the team"
+          },
           "title": "@:be.boxsprout.shared.about",
-          "description": "Learn more about the vision of BoxSprout and who we are."
+          "contact": "Contact Us"
         },
-        "anis": {
-          "title": "Meet Anis",
-          "image": "Anis Sakkaf",
-          "description": "Anis Sakkaf lives in Boortmeerbeek. He is a great developer and a very charismatic person. He founded BoxSprout in February 2019 (together with 3 other team members) as a way of sharing the experience of growing and nurturing plants."
-        },
-        "team": {
-          "martijn": {
-            "name": "Martijn Gilis",
-            "function": "Finance",
-            "image": "@:be.boxsprout.about.team.martijn.name",
-            "description": "Martijn is an alright guy who is hard to describe in a few paragraphs. He is generally the go-to guy if there are any issues (since generally he is the one who caused them). During work hours you will always find him eating behind is desk, no matter the time of day since he is a very hungry young man."
-          },
-          "philippe": {
-            "name": "Philippe Gilops",
-            "function": "Accounting",
-            "image": "@:be.boxsprout.about.team.philippe.name",
-            "description": "As a student tax accountancy, Philippe ensures accurate accounting of our company. In addition to his punctuality, positivity and motivation are also a few words that describe him accurately."
-          },
-          "eduard": {
-            "name": "Eduard Monstrey",
-            "function": "Marketing",
-            "image": "@:be.boxsprout.about.team.eduard.name",
-            "description": "Eduard is the marketing boy of BoxSprout. He is always hardworking looking for new marketing opportunities and making new contacts. People like to describe him as a opportunist who is always on time and never misses a deadline."
-          },
-          "title": "Meet the team"
-        },
-        "title": "@:be.boxsprout.shared.about",
-        "contact": "Contact Us"
-      },
-      "login": {
-        "meta": {
-          "title": "@:be.boxsprout.shared.log-in",
-          "description": "Log into your BoxSprout account."
-        },
-        "image": {
-          "alt": ["A picture of a pretty plant."]
-        },
-        "form": {
-          "email": "@:be.boxsprout.shared.email",
-          "password": "@:be.boxsprout.shared.password",
-          "submit": "@:be.boxsprout.shared.submit",
-          "for-example": "@:be.boxsprout.shared.for-example"
-        },
-        "header": "@:be.boxsprout.shared.log-in"
-      },
-      "not-found": {
-        "meta": {
-          "title": "Not Found",
-          "description": "The page you were looking for wasn't found."
-        },
-        "title": ["Oops,", "looks like you're lost."],
-        "button": "Let's go back"
-      },
-      "order": {
-        "form": {
-          "title": "Shipping & Billing Information",
-          "name": "@:be.boxsprout.shared.name",
-          "for-example": "@:be.boxsprout.shared.for-example",
-          "email": "@:be.boxsprout.shared.email",
-          "phone": "@:be.boxsprout.shared.phone",
-          "address": "@:be.boxsprout.shared.address",
-          "city": "@:be.boxsprout.shared.city",
-          "postal-code": "@:be.boxsprout.shared.postal-code",
-          "country": "@:be.boxsprout.shared.country",
-          "button": "Pay €{price} using Bancontact",
-          "countries": {
-            "belgium": "Belgium"
-          }
-        },
-        "toast": {
-          "sign-up": "You need to sign up first.",
-          "log-in": "@:be.boxsprout.shared.log-in"
-        },
-        "title": "Purchase {product}",
-        "subtitle": "Complete your shipping and payment details below"
-      },
-      "order-confirm": {
-        "status": {
-          "consumed": {
-            "title": "Thanks for your order!",
-            "description": "We just sent your receipt to your email address, and your items will be on their way shortly."
-          },
-          "failed": {
-            "title": "Payment Cancelled.",
-            "description": "Your payment was cancelled."
-          },
-          "waiting": {
-            "title": "Processing Payment...",
-            "description": "We are waiting for your payment to be confirmed. The page will automatically refresh."
-          },
-          "error": {
-            "title": "Payment Failed.",
-            "description": "We are waiting for your payment to be confirmed. The page will automatically refresh."
-          }
-        },
-        "title": "Purchase Confirmation",
-        "subtitle": "Please contact us via boxsprout@gmail.com with your payment details."
-      },
-      "products": {
-        "meta": {
-          "title": "@:be.boxsprout.shared.products",
-          "description": "Overview of available BoxSprout products."
-        },
-        "title": "Product Overview",
-        "purchase": "Purchase"
-      },
-      "sign-up": {
-        "meta": {
-          "title": "@:be.boxsprout.shared.sign-up",
-          "description": "Sign up to BoxSprout."
-        },
-        "image": {
-          "alt": ["A picture of a pretty plant."]
-        },
-        "form": {
-          "email": "@:be.boxsprout.shared.email",
-          "name": "@:be.boxsprout.shared.name",
-          "password": "@:be.boxsprout.shared.password",
-          "confirm-password": "@:be.boxsprout.shared.confirm-password",
-          "register": "@:be.boxsprout.shared.register",
-          "for-example": "@:be.boxsprout.shared.for-example"
-        },
-        "header": "@:be.boxsprout.shared.sign-up"
-      },
-      "model": {
         "login": {
-          "success-login": "Login success!",
-          "success-register": "Registration success!"
+          "meta": {
+            "title": "@:be.boxsprout.shared.log-in",
+            "description": "Log into your BoxSprout account."
+          },
+          "image": {
+            "alt": ["A picture of a pretty plant."]
+          },
+          "form": {
+            "email": "@:be.boxsprout.shared.email",
+            "password": "@:be.boxsprout.shared.password",
+            "submit": "@:be.boxsprout.shared.submit",
+            "for-example": "@:be.boxsprout.shared.for-example"
+          },
+          "header": "@:be.boxsprout.shared.log-in"
         },
-        "failed-register": "Failed to register. (Critical)"
+        "not-found": {
+          "meta": {
+            "title": "Not Found",
+            "description": "The page you were looking for wasn't found."
+          },
+          "title": ["Oops,", "looks like you're lost."],
+          "button": "Let's go back"
+        },
+        "order": {
+          "form": {
+            "title": "Shipping & Billing Information",
+            "name": "@:be.boxsprout.shared.name",
+            "for-example": "@:be.boxsprout.shared.for-example",
+            "email": "@:be.boxsprout.shared.email",
+            "phone": "@:be.boxsprout.shared.phone",
+            "address": "@:be.boxsprout.shared.address",
+            "city": "@:be.boxsprout.shared.city",
+            "postal-code": "@:be.boxsprout.shared.postal-code",
+            "country": "@:be.boxsprout.shared.country",
+            "button": "Pay €{price} using Bancontact",
+            "countries": {
+              "belgium": "Belgium"
+            }
+          },
+          "toast": {
+            "sign-up": "You need to sign up first.",
+            "log-in": "@:be.boxsprout.shared.log-in"
+          },
+          "title": "Purchase {product}",
+          "subtitle": "Complete your shipping and payment details below"
+        },
+        "order-confirm": {
+          "status": {
+            "consumed": {
+              "title": "Thanks for your order!",
+              "description": "We just sent your receipt to your email address, and your items will be on their way shortly."
+            },
+            "failed": {
+              "title": "Payment Cancelled.",
+              "description": "Your payment was cancelled."
+            },
+            "waiting": {
+              "title": "Processing Payment...",
+              "description": "We are waiting for your payment to be confirmed. The page will automatically refresh."
+            },
+            "error": {
+              "title": "Payment Failed.",
+              "description": "We are waiting for your payment to be confirmed. The page will automatically refresh."
+            }
+          },
+          "title": "Purchase Confirmation",
+          "subtitle": "Please contact us via boxsprout@gmail.com with your payment details."
+        },
+        "products": {
+          "meta": {
+            "title": "@:be.boxsprout.shared.products",
+            "description": "Overview of available BoxSprout products."
+          },
+          "title": "Product Overview",
+          "purchase": "Purchase"
+        },
+        "sign-up": {
+          "meta": {
+            "title": "@:be.boxsprout.shared.sign-up",
+            "description": "Sign up to BoxSprout."
+          },
+          "image": {
+            "alt": ["A picture of a pretty plant."]
+          },
+          "form": {
+            "email": "@:be.boxsprout.shared.email",
+            "name": "@:be.boxsprout.shared.name",
+            "password": "@:be.boxsprout.shared.password",
+            "confirm-password": "@:be.boxsprout.shared.confirm-password",
+            "register": "@:be.boxsprout.shared.register",
+            "for-example": "@:be.boxsprout.shared.for-example"
+          },
+          "header": "@:be.boxsprout.shared.sign-up"
+        },
+        "model": {
+          "login": {
+            "success-login": "Login success!",
+            "success-register": "Registration success!"
+          },
+          "failed-register": "Failed to register. (Critical)"
+        }
       }
     }
   }
-}
