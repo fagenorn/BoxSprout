@@ -160,8 +160,6 @@ import LocaleChanger from "@/components/LocaleChanger.vue";
 export const titleTemplate = (chunk: string) =>
   chunk ? `${chunk} - BoxSprout` : "BoxSprout";
 
-const urlTemplate = process.env.BASE_URL + "%s";
-
 const metaDescriptions = (str: string): any[] => {
   return [
     { vmid: "description", name: "description", content: str },
@@ -196,7 +194,11 @@ const metaTitles = (str: string): any[] => {
 
 const metaUrls = (str: string): any[] => {
   return [
-    { vmid: "og:url", property: "og:url", content: str, template: urlTemplate }
+    {
+      vmid: "og:url",
+      property: "og:url",
+      content: process.env.BASE_URL + str
+    }
   ];
 };
 
@@ -231,12 +233,12 @@ export const metaWrapper = (
         },
         {
           property: "og:image",
-          content: require("@/assets/Logo.png"),
+          content: require("@/assets/box.jpg"),
           vmid: "og:image"
         },
         {
           itemprop: "image",
-          content: require("@/assets/Logo.png")
+          content: require("@/assets/box.jpg")
         }
       ].concat(metaWrapper(title, description, url))
     };
@@ -305,6 +307,12 @@ document.addEventListener("DOMContentLoaded", () => {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
+  .hero {
+    .title {
+      text-transform: uppercase;
+    }
+  }
 
   .hvr-grow {
     transition: all 0.2s ease-in-out;

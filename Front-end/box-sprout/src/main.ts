@@ -20,6 +20,12 @@ import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
 import { faUser } from "@fortawesome/free-solid-svg-icons/faUser";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons/faCreditCard";
+import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
+
+import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import i18n from "./i18n";
 
@@ -30,7 +36,11 @@ library.add(
   faLock,
   faUser,
   faGlobe,
-  faCreditCard
+  faCreditCard,
+  faStar,
+  faInstagram,
+  faLinkedin,
+  faFacebook
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

@@ -88,7 +88,8 @@ export default class Home extends Vue {}
   }
 
   .images {
-    margin: 0;
+    max-width: 1500px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
 

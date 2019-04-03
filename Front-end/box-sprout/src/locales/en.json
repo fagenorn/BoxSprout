@@ -47,15 +47,14 @@
             "Garden cress on a window sill."
           ]
         },
-        "description": "Home page description.",
+        "description": "An all-in-one, eco-friendly building package to start your own mini-garden. Perfect as a gift for a loved one to introduce them to the world of gardening.",
         "button": "Find out more"
       },
       "about": {
         "meta": {
           "title": "@:be.boxsprout.shared.about",
-          "description": "Learn more about the vision of BoxSprout."
-        },
-        "main": "This is an about page."
+          "description": "Learn more about the vision of BoxSprout and who we are."
+        }
       },
       "login": {
         "meta": {
