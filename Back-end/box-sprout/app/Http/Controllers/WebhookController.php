@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Order;
 use App\Product;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
 use Laravel\Cashier\Http\Controllers\WebhookController as CashierController;
 
 class WebhookController extends CashierController

@@ -38,6 +38,10 @@
             <span>{{ $t("be.boxsprout.app.nav.about") }}</span>
           </router-link>
 
+          <router-link :to="{ name: 'guide' }" class="navbar-item">
+            <span>Guide</span>
+          </router-link>
+
           <div class="navbar-divider" />
           <div v-if="!user.isLoggedIn">
             <router-link :to="{ name: 'sign up' }" class="navbar-item">
@@ -69,6 +73,10 @@
 
           <router-link :to="{ name: 'about' }" class="navbar-item hvr-shadow">
             <span>{{ $t("be.boxsprout.app.nav.about") }}</span>
+          </router-link>
+
+          <router-link :to="{ name: 'guide' }" class="navbar-item hvr-shadow">
+            <span>Guide</span>
           </router-link>
 
           <div class="navbar-item" v-if="!user.isLoggedIn">

@@ -1,28 +1,26 @@
 <template>
-  <div class="hero is-fullheight">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns">
-          <div class="column error-placeholder is-8 is-offset-2">
-            <img class="is-error" src="@/assets/404.svg" />
-
-            <div class="error-text">
-              <h1 class="is-size-2 is-size-4-mobile">
-                {{ $t("be.boxsprout.not-found.title[0]") }}
-              </h1>
-              <h2 class="is-size-4 is-size-6-mobile">
-                <span> {{ $t("be.boxsprout.not-found.title[1]") }} </span>
-              </h2>
-              <a
-                @click="$router.go(-1)"
-                class="button is-primary is-rounded hvr-grow"
-                ><span> {{ $t("be.boxsprout.not-found.button") }} </span></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="guide container is-fluid">
+    <h1 class="title">Box Tutorial</h1>
+    <iframe
+      width="800"
+      height="800"
+      src="https://www.youtube.com/embed/WZOXe4DzPx0"
+      frameborder="1"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <br />
+    <hr />
+    <br />
+    <h1 class="title">Plant Tutorial</h1>
+    <iframe
+      width="800"
+      height="800"
+      src="https://www.youtube.com/embed/ZpKX4Sy1kZU"
+      frameborder="1"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
 </template>
 
@@ -32,11 +30,9 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
 
 @Component({
   metaInfo() {
-    const title = this.$t("be.boxsprout.not-found.meta.title") as string;
-    const description = this.$t(
-      "be.boxsprout.not-found.meta.description"
-    ) as string;
-    const url = "404";
+    const title = "Guide";
+    const description = "Product Guides";
+    const url = "guide";
 
     return {
       title,
@@ -45,31 +41,13 @@ import { metaWrapper, titleTemplate } from "@/App.vue";
     };
   }
 })
-export default class NotFound extends Vue {}
+export default class Guide extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-div {
-  &.hero {
-    h1 {
-      font-weight: 700;
-    }
-  }
-
-  img {
-    max-height: 400px;
-  }
-
-  .error-text {
-    a {
-      margin-top: 30px;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      span {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-    }
+.guide {
+  iframe {
+    height: 800px;
   }
 }
 </style>
