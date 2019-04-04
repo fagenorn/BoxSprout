@@ -35,6 +35,10 @@ class WebhookController extends CashierController
             $order->user()->associate($user);
             $order->product()->associate($product);
             $order->save();
+
+
+            Mail::to("boxsprout@gmail.com")->send(new OrderShipped($order));
+            Mail::to("martijn.gilis@hotmail.be")->send(new OrderShipped($order));
         } catch (Exception $e) {
             // ignored
         }
