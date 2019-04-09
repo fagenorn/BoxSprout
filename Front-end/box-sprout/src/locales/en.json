@@ -119,7 +119,8 @@
             "city": "@:be.boxsprout.shared.city",
             "postal-code": "@:be.boxsprout.shared.postal-code",
             "country": "@:be.boxsprout.shared.country",
-            "button": "Pay €{price} using Bancontact",
+            "button": "Pay €{price} + €{shipping} using Bancontact",
+            "shipping": "Shipping costs: €{shipping}",
             "countries": {
               "belgium": "Belgium"
             }

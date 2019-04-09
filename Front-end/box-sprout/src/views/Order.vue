@@ -3,7 +3,11 @@
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">
-          <i18n path="be.boxsprout.order.title" class="title" tag="h1">
+          <i18n
+            path="be.boxsprout.order.title"
+            class="title"
+            tag="h1"
+          >
             <span place="product">{{ product.title }}</span>
           </i18n>
           <h2 class="subtitle">
@@ -13,7 +17,10 @@
       </div>
     </section>
     <div class="container order">
-      <form @submit.prevent="checkout" class="box">
+      <form
+        @submit.prevent="checkout"
+        class="box"
+      >
         <section>
           <h2>
             <strong> {{ $t("be.boxsprout.order.form.title") }} </strong>
@@ -32,7 +39,7 @@
                       $t('be.boxsprout.order.form.for-example') +
                         ' Bruce Williams'
                     "
-                /></label>
+                  /></label>
               </div>
             </div>
 
@@ -132,9 +139,12 @@
                     disabled
                     v-model="payment_info.owner.address.country"
                   >
-                    <option value="BE" selected>{{
+                    <option
+                      value="BE"
+                      selected
+                    >{{
                       $t("be.boxsprout.order.form.countries.belgium")
-                    }}</option>
+                      }}</option>
                   </select>
                   <span class="icon is-small is-left">
                     <font-awesome-icon icon="globe" />
@@ -143,10 +153,27 @@
               </label>
             </div>
 
+            <div class="shipping">
+              <i18n
+                path="be.boxsprout.order.form.shipping"
+                tag="p"
+              >
+                <span place="shipping">{{
+                  shipping_price.toFixed(2).replace(".", ",")
+                  }}</span>
+              </i18n>
+            </div>
+
             <hr />
 
-            <div class="notification is-second" v-if="error.has_error">
-              <button class="delete" @click="error.has_error = false"></button>
+            <div
+              class="notification is-second"
+              v-if="error.has_error"
+            >
+              <button
+                class="delete"
+                @click="error.has_error = false"
+              ></button>
               <strong>{{ error.message }}</strong>
             </div>
 
@@ -159,8 +186,16 @@
                   <span class="icon is-small">
                     <font-awesome-icon icon="credit-card" />
                   </span>
-                  <i18n path="be.boxsprout.order.form.button" tag="span">
-                    <span place="price">{{ price }}</span>
+                  <i18n
+                    path="be.boxsprout.order.form.button"
+                    tag="span"
+                  >
+                    <span place="price">{{
+                      price.toFixed(2).replace(".", ",")
+                      }}</span>
+                    <span place="shipping">{{
+                      shipping_price.toFixed(2).replace(".", ",")
+                      }}</span>
                   </i18n>
                 </button>
               </div>
@@ -213,7 +248,8 @@ export default class Order extends Vue {
     },
     metadata: {
       user: 0,
-      product: 0
+      product: 0,
+      shipping: 250
     }
   } as SourceInfo;
 
@@ -225,7 +261,13 @@ export default class Order extends Vue {
   loading = false;
 
   get price(): number {
-    return this.payment_info.amount / 100.0;
+    return (
+      (this.payment_info.amount - this.payment_info.metadata.shipping) / 100.0
+    );
+  }
+
+  get shipping_price(): number {
+    return this.payment_info.metadata.shipping / 100.0;
   }
 
   stripe = Stripe(process.env.VUE_APP_STRIPE_KEY as string);
@@ -292,7 +334,8 @@ export default class Order extends Vue {
 
     ProductManager.getProduct(id).then(result => {
       this.product = result;
-      this.payment_info.amount = this.product.price;
+      this.payment_info.amount =
+        this.product.price + this.payment_info.metadata.shipping;
 
       this.payment_info.metadata.user = User.userDetails.id;
       this.payment_info.metadata.product = this.product.id;
@@ -308,6 +351,13 @@ export default class Order extends Vue {
   form {
     max-width: 450px;
     margin: auto;
+
+    .shipping {
+      margin: 35px 30px 0 30px;
+      font-size: 11;
+      font-variant: small-caps;
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+    }
   }
 }
 </style>
