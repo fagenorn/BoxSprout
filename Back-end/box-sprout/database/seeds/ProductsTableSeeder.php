@@ -28,7 +28,7 @@ class ProductsTableSeeder extends Seeder
             'image' => 'mint.jpg',
         ]);
 
-        $product->fill($this->productDetails('mint'))->save();
+        $product->fill($this->productDetails('chives'))->save();
 
         // ######
 

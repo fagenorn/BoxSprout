@@ -5,6 +5,10 @@ return [
         'title' => 'Basil',
         'description' => 'Basil \'Genovese\', also called Sweet Basil, is one of the most popular herb plants that we offer. We grow a lot of different basil plants and this is a favorite for authentic Italian basil flavor and aroma - it is often used to make traditional pesto. It is a must for your culinary herb gardening efforts.'
     ],
+    'chives' => [
+        'title' => 'Chives',
+        'description' => 'Chives belong to the onion family and conjure up light purple spherical flowers in bloom. To use the plants only for dishes, it is better not to let them flower fully and remove these flowers. To grow chives you have to place the seeds in a trench of about 5 millimeters in a moist soil. The germination takes place optimally in a dark place at a temperature between 20-25 ° C. After two weeks you can move the plant to a window sill in a not too warm place. Harvesting is done by cutting the plant to about 3 centimeters, which you can do about 4x a year.'
+    ],
     'mint' => [
         'title' => 'Mint',
         'description' => 'Spearmint has strong flavor and fragrance that is released with simple bruising. It’s the best mint variety for hot and cold drinks. Toss bruised leaves into ice water for a refreshing summer drink or add to iced tea. Spearmint is favored for flavoring beverages such as mojito. Also know as Yerba Buena. Spreading plant is great for containers. Tolerates light frost.'
