@@ -1,20 +1,2 @@
 {
-  "be": {
-    "boxsprout": {
-      "app": {
-        "nav": {
-          "home": "Oui Oui",
-          "products": "Oui Oui",
-          "about": "Oui Oui",
-          "sign-up": "Oui Oui",
-          "log-in": "Oui Oui",
-          "log-out": "Oui Oui"
-        }
-      },
-      "home": {
-        "description": "Oui Oui",
-        "button": "Oui Oui"
-      }
-    }
-  }
 }

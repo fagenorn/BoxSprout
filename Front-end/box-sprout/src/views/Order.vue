@@ -3,11 +3,7 @@
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">
-          <i18n
-            path="be.boxsprout.order.title"
-            class="title"
-            tag="h1"
-          >
+          <i18n path="be.boxsprout.order.title" class="title" tag="h1">
             <span place="product">{{ product.title }}</span>
           </i18n>
           <h2 class="subtitle">
@@ -17,10 +13,7 @@
       </div>
     </section>
     <div class="container order">
-      <form
-        @submit.prevent="checkout"
-        class="box"
-      >
+      <form @submit.prevent="checkout" class="box">
         <section>
           <h2>
             <strong> {{ $t("be.boxsprout.order.form.title") }} </strong>
@@ -39,7 +32,7 @@
                       $t('be.boxsprout.order.form.for-example') +
                         ' Bruce Williams'
                     "
-                  /></label>
+                /></label>
               </div>
             </div>
 
@@ -139,12 +132,9 @@
                     disabled
                     v-model="payment_info.owner.address.country"
                   >
-                    <option
-                      value="BE"
-                      selected
-                    >{{
+                    <option value="BE" selected>{{
                       $t("be.boxsprout.order.form.countries.belgium")
-                      }}</option>
+                    }}</option>
                   </select>
                   <span class="icon is-small is-left">
                     <font-awesome-icon icon="globe" />
@@ -154,26 +144,17 @@
             </div>
 
             <div class="shipping">
-              <i18n
-                path="be.boxsprout.order.form.shipping"
-                tag="p"
-              >
+              <i18n path="be.boxsprout.order.form.shipping" tag="p">
                 <span place="shipping">{{
                   shipping_price.toFixed(2).replace(".", ",")
-                  }}</span>
+                }}</span>
               </i18n>
             </div>
 
             <hr />
 
-            <div
-              class="notification is-second"
-              v-if="error.has_error"
-            >
-              <button
-                class="delete"
-                @click="error.has_error = false"
-              ></button>
+            <div class="notification is-second" v-if="error.has_error">
+              <button class="delete" @click="error.has_error = false"></button>
               <strong>{{ error.message }}</strong>
             </div>
 
@@ -186,16 +167,13 @@
                   <span class="icon is-small">
                     <font-awesome-icon icon="credit-card" />
                   </span>
-                  <i18n
-                    path="be.boxsprout.order.form.button"
-                    tag="span"
-                  >
+                  <i18n path="be.boxsprout.order.form.button" tag="span">
                     <span place="price">{{
                       price.toFixed(2).replace(".", ",")
-                      }}</span>
+                    }}</span>
                     <span place="shipping">{{
                       shipping_price.toFixed(2).replace(".", ",")
-                      }}</span>
+                    }}</span>
                   </i18n>
                 </button>
               </div>

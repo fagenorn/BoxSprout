@@ -37,12 +37,12 @@
                     "title": "@:be.boxsprout.shared.home",
                     "description": "Startpagina."
                 },
-                "description": "Een alles-in-één, milieuvriendelijk bouwpakket waarmee u uw eigen minituin kunt beginnen. Perfect als een geschenk voor een geliefde om hen kennis te laten maken met de wereld van het tuinieren.",
-                "button": "Kom meer te weten",
+                "description": "Een alles-in-één, milieuvriendelijk bouwpakket waarmee u uw eigen mini-tuin op de vensterbank kan beginnen. Perfect als geschenk voor een geliefde om hen kennis te laten maken met de wereld van het tuinieren.",
+                "button": "Bekijk ons aanbod\n",
                 "image": {
                     "alt": [
                         "Eenvoudige plant op een vensterbank.",
-                        "Toats gegarneerd met verschillende kruiden en specerijen.",
+                        "Toasts gegarneerd met verschillende kruiden en specerijen.",
                         "Tuinkers op een vensterbank."
                     ]
                 }
@@ -55,28 +55,28 @@
                 "anis": {
                     "title": "Ontmoet Anis",
                     "image": "Anis Sakkaf",
-                    "description": "Anis Sakkaf woont in Boortmeerbeek. Hij is een geweldige ontwikkelaar en een zeer charismatische persoon. Hij richtte BoxSprout op in februari 2019 (samen met 3 andere teamleden) om de ervaring van het kweken en verzorgen van planten te delen met anderen."
+                    "description": "Anis Sakkaf woont in Boortmeerbeek. Hij is een geweldige ontwikkelaar en een charismatisch persoon. Hij richtte BoxSprout samen met 3 mede-studenten op in februari 2019 om de ervaring van het kweken en verzorgen van planten te delen met anderen."
                 },
                 "team": {
                     "martijn": {
                         "name": "Martijn Gilis",
                         "function": "Financien",
                         "image": "@:be.boxsprout.about.team.martijn.name",
-                        "description": "Martijn, een student financiën en verzekeringen, is enigszins de \"manusje-van-alles\". Met de hulp van zijn creatieve geest hebben we onze verkoopstand ontworpen. Bovendien is hij onze sociale media-man, wanneer je contact met ons hebt, dan is dit de man met wie je praat!"
+                        "description": "Martijn, een student financiën en verzekeringen, is enigszins het \"manusje-van-alles\". Met behulp van zijn creatieve geest hebben we onze verkoopstand ontworpen. Bovendien is hij onze sociale media-man, wanneer je contact met ons opneemt, is dit de man met die je verder zal helpen!\n"
                     },
                     "philippe": {
                         "name": "Philippe Gilops",
                         "function": "Boekhouding",
                         "image": "@:be.boxsprout.about.team.philippe.name",
-                        "description": "Philippe zorgt als student accountancy-fiscaliteit voor een nauwkeurige boekhouding van onze onderneming. Naast zijn stiptheid zijn ook positiviteit en motivatie enkele termen die hem op het lijf zijn geschreven."
+                        "description": "Philippe zorgt als student accountancy-fiscaliteit voor de nauwkeurige boekhouding van onze onderneming. Naast zijn stiptheid zijn ook positiviteit en motivatie enkele termen die hem op het lijf zijn geschreven."
                     },
                     "eduard": {
                         "name": "Eduard Monstrey",
                         "function": "Marketing",
                         "image": "@:be.boxsprout.about.team.eduard.name",
-                        "description": ""
+                        "description": "Eduard is de marketingstudent van de groep. Hij is hardwerkend, en zoekt altijd naar nieuwe marketingopportuniteiten om zo het bedrijf verder te helpen."
                     },
-                    "title": "Ontmoet de team"
+                    "title": "Ontmoet het team"
                 },
                 "title": "@:be.boxsprout.shared.about",
                 "contact": "Contacteer Ons"
@@ -124,7 +124,8 @@
                     "button": "Betaal €{price} met Bancontact",
                     "countries": {
                         "belgium": "België"
-                    }
+                    },
+                    "shipping": "Shipping costs: €{shipping}"
                 },
                 "toast": {
                     "sign-up": "U moet eerst registreren.",

@@ -19,11 +19,12 @@
                 {{ $t("be.boxsprout.home.description") }}
               </h2>
               <div class="links">
-                <a
+                <router-link
+                  :to="{ name: 'products' }"
                   class="is-size-4 is-size-6-mobile button is-fifth is-large hvr-grow"
                 >
-                  {{ $t("be.boxsprout.home.button") }}
-                </a>
+                  <span>{{ $t("be.boxsprout.home.button") }}</span>
+                </router-link>
               </div>
             </div>
           </div>
