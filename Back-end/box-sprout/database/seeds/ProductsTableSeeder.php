@@ -25,7 +25,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'basil.jpg',
+            'image' => 'basil.1.jpg',
         ]);
 
         $product->fill($this->productDetails('chives'))->save();
@@ -34,7 +34,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'basil.jpg',
+            'image' => 'basil.2.jpg',
         ]);
 
         $product->fill($this->productDetails('borage'))->save();
@@ -43,7 +43,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'basil.jpg',
+            'image' => 'basil.3.jpg',
         ]);
 
         $product->fill($this->productDetails('rucola'))->save();
@@ -61,7 +61,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'basil.jpg',
+            'image' => 'basil.4.jpg',
         ]);
 
         $product->fill($this->productDetails('dill'))->save();
@@ -70,7 +70,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'basil.jpg',
+            'image' => 'basil.5.jpg',
         ]);
 
         $product->fill($this->productDetails('coriander'))->save();
@@ -79,7 +79,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'basil.jpg',
+            'image' => 'cress.jpg',
         ]);
 
         $product->fill($this->productDetails('radish'))->save();
