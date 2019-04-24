@@ -3,22 +3,34 @@
 return [
     'basil' => [
         'title' => 'Basil',
-        'description' => 'Basil \'Genovese\', also called Sweet Basil, is one of the most popular herb plants that we offer. We grow a lot of different basil plants and this is a favorite for authentic Italian basil flavor and aroma - it is often used to make traditional pesto. It is a must for your culinary herb gardening efforts.'
+        'description' => ''
     ],
     'chives' => [
         'title' => 'Chives',
-        'description' => 'Chives belong to the onion family and conjure up light purple spherical flowers in bloom. To use the plants only for dishes, it is better not to let them flower fully and remove these flowers. To grow chives you have to place the seeds in a trench of about 5 millimeters in a moist soil. The germination takes place optimally in a dark place at a temperature between 20-25 ° C. After two weeks you can move the plant to a window sill in a not too warm place. Harvesting is done by cutting the plant to about 3 centimeters, which you can do about 4x a year.'
+        'description' => ''
     ],
-    'mint' => [
-        'title' => 'Mint',
-        'description' => 'Spearmint has strong flavor and fragrance that is released with simple bruising. It’s the best mint variety for hot and cold drinks. Toss bruised leaves into ice water for a refreshing summer drink or add to iced tea. Spearmint is favored for flavoring beverages such as mojito. Also know as Yerba Buena. Spreading plant is great for containers. Tolerates light frost.'
+    'borage' => [
+        'title' => 'Borage',
+        'description' => ''
     ],
-    'cress' => [
-        'title' => 'Cress',
-        'description' => 'Garden cress grows…well, like a weed, and some people think the plant’s name in many languages is derived from the Latin word crescere, which means to grow fast. It contains iron, folic acid and vitamins A and C. The tangy, sharpish flavour peps up salads and soups and gives a fresh edge to sandwiches or smoked salmon.'
+    'rucola' => [
+        'title' => 'Rucola',
+        'description' => ''
     ],
     'cherry-tomato' => [
         'title' => 'Cherry Tomato',
-        'description' => 'When Sweet 100 tomato was first introduced it created a buzz among gardeners because it is so tasty and produces for such a long time. Now, its improved cousin, Super Sweet 100 hybrid, bears the same long, branched clusters of deliciously sweet tomatoes high in sugar and vitamin C. They are perfect for snacking, salads, and even juice.'
-    ]
+        'description' => ''
+    ],
+    'dill' => [
+        'title' => 'Dill',
+        'description' => ''
+    ],
+    'coriander' => [
+        'title' => 'Coriander',
+        'description' => ''
+    ],
+    'radish' => [
+        'title' => 'Radish',
+        'description' => ''
+    ],
 ];
