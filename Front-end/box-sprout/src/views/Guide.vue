@@ -22,16 +22,6 @@
               allowfullscreen
             ></iframe>
           </div>
-
-          <div class="description">
-            <h3>Hoe doos vouwen?</h3>
-            <ol>
-              <li>Stap 1</li>
-              <li>Stap 2</li>
-              <li>Stap 3</li>
-              <li>Stap 4</li>
-            </ol>
-          </div>
         </div>
       </div>
 
@@ -44,10 +34,20 @@
           <div class="description">
             <h3>Hoe zaadjes planten?</h3>
             <ol>
-              <li>Stap 1</li>
-              <li>Stap 2</li>
-              <li>Stap 3</li>
-              <li>Stap 4</li>
+              <li>
+                Steek de kokospellet in het biologisch afbreekbare plantenzakje
+              </li>
+              <li>Zet het zakje in het doosje dat je zojuist hebt gevouwd</li>
+              <li>
+                Giet 350 mililiter water in het zakje en wacht 10 minuutjes
+              </li>
+              <li>Maak de aarde een beetje los met de spatel</li>
+              <li>Plant nu je zaadjes op maximum 0,5cm diepte</li>
+              <li>
+                Plaats de box op een vensterbank en wacht tot je zaadjes
+                uitkomen
+              </li>
+              <li>Vergeet niet om de zaadjes af en toe te bevochtigen</li>
             </ol>
           </div>
 
@@ -63,27 +63,6 @@
       </div>
     </div>
   </div>
-  <!-- <h1 class="title">Box Tutorial</h1>
-    <iframe
-      width="800"
-      height="800"
-      src="https://www.youtube.com/embed/WZOXe4DzPx0"
-      frameborder="1"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <br />
-    <hr />
-    <br />
-    <h1 class="title">Plant Tutorial</h1>
-    <iframe
-      width="800"
-      height="800"
-      src="https://www.youtube.com/embed/ZpKX4Sy1kZU"
-      frameborder="1"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe> -->
 </template>
 
 <script lang="ts">
