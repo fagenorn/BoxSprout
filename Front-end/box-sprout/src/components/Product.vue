@@ -5,7 +5,7 @@
         <div class="price-tag is-rounded is-primary">
           <span>{{ price.toFixed(2).replace(".", ",") }}</span>
         </div>
-        <figure class="image is-4by3">
+        <figure class="image">
           <img :src="details.image" :alt="details.title" />
         </figure>
       </div>
