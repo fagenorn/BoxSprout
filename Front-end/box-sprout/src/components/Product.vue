@@ -58,6 +58,8 @@ export default class Product extends Vue {
 
 <style scoped lang="scss">
 .product {
+  max-width: 350px;
+
   .price-tag {
     position: absolute;
     z-index: 1;
