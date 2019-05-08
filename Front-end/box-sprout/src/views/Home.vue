@@ -35,17 +35,17 @@
     <div class="container is-fluid images">
       <div class="image-col">
         <img
-          src="@/assets/plant-3.jpg"
+          src="@/assets/plant-6.jpg"
           :alt="$t('be.boxsprout.home.image.alt[0]')"
         />
         <img
-          src="@/assets/plant-5.jpg"
+          src="@/assets/plant-7.jpg"
           :alt="$t('be.boxsprout.home.image.alt[2]')"
         />
       </div>
       <div class="image-col">
         <img
-          src="@/assets/plant-4.jpg"
+          src="@/assets/plant-8.jpg"
           :alt="$t('be.boxsprout.home.image.alt[1]')"
         />
       </div>

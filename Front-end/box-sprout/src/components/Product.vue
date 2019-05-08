@@ -13,8 +13,22 @@
         <p class="title is-4">{{ details.title }}</p>
         <hr />
         <div class="content description">
+          <div>
+            <h4>Inbegrepen</h4>
+            <ul>
+              <li>1x Vouwdoos deksel</li>
+              <li>1x Vouwdoos</li>
+              <li>2x Bio zakje</li>
+              <li>1x Houten stok</li>
+              <li>1x Business kaart</li>
+              <li>1x Verzend doos</li>
+              <li>1x Envelope met zaadjes</li>
+            </ul>
+          </div>
+          <hr />
           <p>{{ details.description }}</p>
         </div>
+        <hr />
         <div class="product-footer">
           <router-link
             class="button is-primary hvr-grow is-size-5-mobile"

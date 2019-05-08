@@ -33,4 +33,8 @@ return [
         'title' => 'Radijs',
         'description' => 'Het zaaien van radijsjes kan al vanaf begin frebruari binnen gebeuren. Van maart tot september kan er in volle grond gezaaid worden. In 1 potje kan je zo’n 4 à 5 radijzen zaaien door de zaadjes op 1 centimeter diepte te planten. Het onderhoud is gemakkelijk, het is enkel belangrijk dat ze grond regelmatig wordt bevochtigd en dat de zaadjes niet te dicht op elkaar gezaaid worden (zo’n 4cm tussen laten). Radijsjes bevatten een bron van calcium, ijzer, eiwitten en zeer weinig calorieën en kunnen dus dienen als gezonde snack of apertief!'
     ],
+    'cress' => [
+        'title' => 'Tuinkers',
+        'description' => 'Tuinkers kunnen we gemakkelijk het gehele jaar door zelf binnenshuis kweken. De plantjes moeten dagelijks bevochtigd worden voor een optimaal resultaat. De zaden kiemen snel en de kiemplantjes zijn al na amper een week oogstbaar. Tuinkers ontkiemt na een dag en wordt 7 tot 14 dagen na het zaaien gegeten. De steeltjes zijn dan zo\'n 3 tot 8 cm lang. Hou er rekening mee dat hoe jonger je tuinkers oogst, hoe zachter de smaak zal zijn. Tuinkers bevat mosterdolie en smaakt voortreffelijk in een gemengde salade, bij gerookte zalm of andere vissoorten. De jonge plantjes zijn rijk aan vitaminen A, B, C en mineralen.'
+    ],
 ];

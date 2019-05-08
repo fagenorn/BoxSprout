@@ -19,7 +19,8 @@
                 "country": "Land",
                 "confirm-password": "Bevestig wachtwoord",
                 "register": "Registreren",
-                "log-out": "Afmelden"
+                "log-out": "Afmelden",
+                "guide": "Gids"
             },
             "app": {
                 "nav": {
@@ -183,6 +184,16 @@
                     "for-example": "@:be.boxsprout.shared.for-example"
                 },
                 "header": "@:be.boxsprout.shared.sign-up"
+            },
+            "guide":{
+                "meta": {
+                    "title": "@:be.boxsprout.shared.guide",
+                    "description": "Gids over het gebruikt van BoxSprout."
+                },
+                "tutorial":{
+
+                },
+                "title": "@:be.boxsprout.shared.guide"
             },
             "model": {
                 "login": {

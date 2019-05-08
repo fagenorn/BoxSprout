@@ -32,12 +32,12 @@ class ProductsTableSeeder extends Seeder
 
         // ######
 
-        $product = Product::firstOrNew([
-            'price' => 995,
-            'image' => 'basil.1.jpg',
-        ]);
+        // $product = Product::firstOrNew([
+        //     'price' => 995,
+        //     'image' => 'basil.1.jpg',
+        // ]);
 
-        $product->fill($this->productDetails('borage'))->save();
+        // $product->fill($this->productDetails('borage'))->save();
 
         // ######
 
@@ -59,21 +59,21 @@ class ProductsTableSeeder extends Seeder
 
         // ######
 
-        $product = Product::firstOrNew([
-            'price' => 995,
-            'image' => 'basil.2.jpg',
-        ]);
+        // $product = Product::firstOrNew([
+        //     'price' => 995,
+        //     'image' => 'basil.2.jpg',
+        // ]);
 
-        $product->fill($this->productDetails('dill'))->save();
+        // $product->fill($this->productDetails('dill'))->save();
 
         // ######
 
-        $product = Product::firstOrNew([
-            'price' => 995,
-            'image' => 'coriander.jpg',
-        ]);
+        // $product = Product::firstOrNew([
+        //     'price' => 995,
+        //     'image' => 'coriander.jpg',
+        // ]);
 
-        $product->fill($this->productDetails('coriander'))->save();
+        // $product->fill($this->productDetails('coriander'))->save();
 
         // ######
 
@@ -83,6 +83,15 @@ class ProductsTableSeeder extends Seeder
         ]);
 
         $product->fill($this->productDetails('radish'))->save();
+
+        // ######
+
+        $product = Product::firstOrNew([
+            'price' => 995,
+            'image' => 'rucola.jpg',
+        ]);
+
+        $product->fill($this->productDetails('cress'))->save();
     }
 
     private function productDetails($product)

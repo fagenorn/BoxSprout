@@ -23,7 +23,7 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 
 @Component
 export default class LocaleChanger extends Vue {
-  langs = ["nl", "fr", "en"];
+  langs = ["nl", "en"];
 
   created() {
     this.$i18n.locale = localStorage.locale || "en";

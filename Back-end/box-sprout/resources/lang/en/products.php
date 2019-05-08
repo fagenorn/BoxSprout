@@ -33,4 +33,8 @@ return [
         'title' => 'Radish',
         'description' => ''
     ],
+    'cress' => [
+        'title' => 'Garden cress',
+        'description' => ''
+    ],
 ];
