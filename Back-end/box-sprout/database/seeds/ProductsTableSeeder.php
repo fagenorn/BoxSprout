@@ -88,7 +88,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = Product::firstOrNew([
             'price' => 995,
-            'image' => 'rucola.jpg',
+            'image' => 'cress.jpg',
         ]);
 
         $product->fill($this->productDetails('cress'))->save();
