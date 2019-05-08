@@ -21,8 +21,8 @@
               <li>2x Bio zakje</li>
               <li>1x Houten stok</li>
               <li>1x Business kaart</li>
-              <li>1x Verzend doos</li>
-              <li>1x Envelope met zaadjes</li>
+              <li>1x Verzenddoos</li>
+              <li>1x Enveloppe met zaadjes</li>
             </ul>
           </div>
           <hr />
