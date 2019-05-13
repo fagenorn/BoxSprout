@@ -39,9 +39,9 @@
               </li>
               <li>Zet het zakje in het doosje dat je zojuist hebt gevouwd</li>
               <li>
-                Giet 350 mililiter water in het zakje en wacht 10 minuutjes
+                Giet 350 mililiter water in het zakje en maak ondertussen de
+                aarde los met de spatel.
               </li>
-              <li>Maak de aarde een beetje los met de spatel</li>
               <li>Plant nu je zaadjes op maximum 0,5cm diepte</li>
               <li>
                 Plaats de box op een vensterbank en wacht tot je zaadjes
